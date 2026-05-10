@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guide d'utilisation — Gungnir · Scarlet Wolf</title>
+<meta name="description" content="Comment démarrer avec Gungnir : essai 14 jours, premiers pas, configuration de la conscience, plugins et intégrations.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="../index.html" class="brand">
+      <span class="brand-mark"></span>
+      <span>Gungnir</span>
+    </a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="primary-nav">☰</button>
+    <nav class="nav" id="primary-nav">
+      <a href="../index.html">Accueil</a>
+      <a href="souverainete.html">Souveraineté</a>
+      <a href="prix.html">Tarifs</a>
+      <a href="guide.html" class="active">Guide</a>
+      <a href="a-propos.html">À propos</a>
+      <a href="contact.html" class="btn btn--primary" style="padding: 10px 18px;">Démo&nbsp;30&nbsp;min</a>
+    </nav>
+  </div>
+</header>
+
+<section class="section" style="padding-top: 80px;">
+  <div class="container--narrow">
+    <div class="section-marker">Guide d'utilisation</div>
+    <h1>Démarrer avec Gungnir.</h1>
+    <p class="lead">
+      Quatre étapes pour passer de "je découvre" à "il connaît mon métier".
+      Compter trente minutes pour les trois premières.
+    </p>
+  </div>
+</section>
+
+<section class="section" style="padding-top: 0;">
+  <div class="container--narrow">
+
+    <article class="card mb-2">
+      <div class="card__subtitle">Étape 1 · 5 minutes</div>
+      <h3 style="color: var(--cream); font-family: var(--font-display);">Créer un compte d'essai 14 jours</h3>
+      <p>
+        Rendez-vous sur <a href="https://gungnir.scarletwolf.cloud">gungnir.scarletwolf.cloud</a>,
+        choisissez l'option <em>Essai 14 jours</em>. Vous donnez une adresse email,
+        rien d'autre. Pas de carte bancaire, pas de SIRET, pas de formulaire de
+        qualification.
+      </p>
+      <p>
+        Vous démarrez avec quatre modèles gratuits OpenRouter pré-câblés
+        (gpt-oss-120b, glm-4.5-air, laguna-m.1, nemotron-3-super-120b).
+        Suffisant pour vous faire un avis sérieux.
+      </p>
+    </article>
+
+    <article class="card mb-2">
+      <div class="card__subtitle">Étape 2 · 10 minutes</div>
+      <h3 style="color: var(--cream); font-family: var(--font-display);">L'onboarding conversationnel</h3>
+      <p>
+        Au premier login, votre agent vous pose cinq questions, en conversation
+        naturelle&nbsp;:
+      </p>
+      <ul class="checklist">
+        <li>Le <strong>nom</strong> que vous voulez lui donner</li>
+        <li>S'il vous <strong>tutoie</strong> ou vous vouvoie</li>
+        <li>Sa <strong>personnalité</strong> (calme, direct, méthodique…)</li>
+        <li>Son <strong>mode d'autonomie</strong> (libre / demande la permission / restreint)</li>
+        <li>Sa <strong>conscience</strong> (Qdrant Cloud recommandé, Qdrant local, ou plus tard)</li>
+      </ul>
+      <p>
+        Pas un formulaire&nbsp;: une vraie conversation. À la fin, votre agent
+        existe — avec son nom, son ton, son cadre.
+      </p>
+    </article>
+
+    <article class="card mb-2">
+      <div class="card__subtitle">Étape 3 · 15 minutes</div>
+      <h3 style="color: var(--cream); font-family: var(--font-display);">Brancher la mémoire long-terme</h3>
+      <p>
+        Si vous avez choisi <em>Qdrant Cloud</em> à l'étape 2, créez un cluster
+        gratuit (1&nbsp;GB inclus) sur
+        <a href="https://cloud.qdrant.io">cloud.qdrant.io</a>. Récupérez l'URL
+        et la clé API, collez-les dans <strong>Paramètres&nbsp;→&nbsp;Conscience</strong>.
+      </p>
+      <p>
+        À partir de cet instant, votre agent se souvient. D'une conversation à
+        l'autre, d'une semaine à l'autre. Il apprend vos préférences, votre
+        contexte, les noms qu'il faut retenir.
+      </p>
+    </article>
+
+    <article class="card mb-2">
+      <div class="card__subtitle">Étape 4 · à votre rythme</div>
+      <h3 style="color: var(--cream); font-family: var(--font-display);">Brancher vos outils</h3>
+      <p>
+        Onglet <strong>Intégrations</strong>. Connecteurs OAuth disponibles&nbsp;:
+        Google (Gmail, Drive, Calendar, Chat, Contacts), Notion, Linear, ClickUp,
+        Airtable, Slack, Discord, Telegram. Un clic, une autorisation, c'est branché.
+      </p>
+      <p>
+        Pour aller plus loin&nbsp;: créez vos workflows <em>Forge</em>
+        (orchestration n8n native), ajoutez vos skills personnalisés, connectez
+        vos canaux de notification (email, Telegram, widget web).
+      </p>
+    </article>
+
+    <blockquote>
+      <p>
+        Gungnir s'adapte à votre métier. Il n'impose pas le sien.
+      </p>
+    </blockquote>
+
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container--narrow">
+    <div class="section-marker">Aller plus loin</div>
+    <h2 class="mb-4">Documentation détaillée.</h2>
+
+    <div class="grid grid--2">
+      <article class="card">
+        <div class="card__subtitle">Pour utilisateurs avancés</div>
+        <h3 style="color: var(--cream); font-family: var(--font-display);">Forge — workflows visuels</h3>
+        <p>YAML d'abord, canvas React Flow ensuite. Chaîner des étapes (LLM,
+        webhook, MCP, condition, attente humaine) pour automatiser des tâches
+        métier répétitives. Compatible 100&nbsp;% avec n8n.</p>
+      </article>
+      <article class="card">
+        <div class="card__subtitle">Pour les DSI</div>
+        <h3 style="color: var(--cream); font-family: var(--font-display);">Audit, logs, isolation</h3>
+        <p>Logs d'activité par utilisateur, exportables. Audit-ready RGPD. Plan
+        de continuité documenté. Pour les équipes Compliance, deux instances
+        Qdrant séparées (audit / contenu) avec isolation cryptographique.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container--narrow text-center">
+    <h2>Une question pendant votre essai ?</h2>
+    <p class="lead" style="margin-left: auto; margin-right: auto;">
+      Vous nous écrivez, on répond sous 24&nbsp;h. Pas de chatbot de support
+      qui vous fait tourner — un humain qui connaît le produit.
+    </p>
+    <a href="contact.html" class="btn btn--primary">Nous écrire</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div>
+      <a href="../index.html" class="brand"><span class="brand-mark"></span><span>Gungnir</span></a>
+      <p class="mt-2" style="color: var(--cream-soft); font-size: 0.95em;">
+        L'IA qui s'éveille à votre métier.<br>
+        Édité par Scarlet Wolf — Suisse / France.
+      </p>
+    </div>
+    <div>
+      <h4>Produit</h4>
+      <ul>
+        <li><a href="../index.html">Accueil</a></li>
+        <li><a href="souverainete.html">Souveraineté</a></li>
+        <li><a href="prix.html">Tarifs</a></li>
+        <li><a href="guide.html">Guide</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Liens</h4>
+      <ul>
+        <li><a href="https://gungnir.scarletwolf.cloud">Application</a></li>
+        <li><a href="https://scarletwolf.fr">Scarlet Wolf</a></li>
+        <li><a href="a-propos.html">À propos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="mailto:contact@scarletwolf.cloud">contact@scarletwolf.cloud</a></li>
+        <li><a href="contact.html">Démo 30&nbsp;min</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="site-footer__legal">
+    <span>© 2026 Scarlet Wolf · Tous droits réservés</span>
+    <span>BSL · Source-available · Audit-ready</span>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js" defer></script>
+</body>
+</html>
