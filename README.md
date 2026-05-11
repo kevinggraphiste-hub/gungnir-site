@@ -2,9 +2,9 @@
 
 Site marketing officiel de Gungnir — édité par Scarlet Wolf.
 
-Statique pur (HTML + CSS + JS vanilla), aligné sur la DA `scarletwolf.fr`
-(palette scarlet/bronze/cream/anthracite, polices Cinzel + Cormorant Garamond
-+ JetBrains Mono).
+Statique pur (HTML + CSS + JS vanilla), palette propre à l'écosystème
+Gungnir (scarlet/bronze/cream/anthracite, polices Cinzel + Cormorant
+Garamond + JetBrains Mono).
 
 ## Arborescence
 
@@ -39,9 +39,10 @@ python3 -m http.server 8080
 
 Site 100% statique, pas de PHP, pas de build. Trois options selon le besoin :
 
-### A. IONOS FTP (cohérent avec site V2 graveur)
+### A. IONOS FTP
 Uploader le dossier complet via FileZilla dans le `htdocs` du domaine
-cible (`gungnir.scarletwolf.fr` ou autre sous-domaine choisi).
+cible (un sous-domaine type `site.scarletwolf.cloud` ou un futur
+domaine dédié — voir aussi B/C ci-dessous).
 
 ### B. Cloudflare Pages / Netlify / Vercel
 Drag & drop du dossier complet — déploiement immédiat avec HTTPS automatique.
