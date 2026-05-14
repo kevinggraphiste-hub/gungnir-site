@@ -39,15 +39,23 @@
       Quatre étapes pour passer de "je découvre" à "il connaît mon métier".
       Compter trente minutes pour les trois premières.
     </p>
+    <p>
+      L'étape 1 a <strong>trois voies au choix</strong> selon votre niveau de souveraineté :
+      essai cloud immédiat, déploiement self-hosted clé en main, ou déploiement self-hosted
+      en mode dev (avec accès au code source). Les étapes 2 à 4 sont identiques pour les trois.
+    </p>
   </div>
 </section>
 
 <section class="section" style="padding-top: 0;">
   <div class="container--narrow">
 
+    <div class="section-marker">Étape 1 · Choisir sa voie de démarrage</div>
+
+    <!-- VOIE A : ESSAI CLOUD -->
     <article class="card mb-2">
-      <div class="card__subtitle">Étape 1 · 5 minutes</div>
-      <h3 style="color: var(--cream); font-family: var(--font-display);">Créer un compte d'essai 14 jours</h3>
+      <div class="card__subtitle">Voie A · 5 minutes · Cloud Scarlet Wolf</div>
+      <h3 style="color: var(--cream); font-family: var(--font-display);">Essai 14 jours sur notre infrastructure</h3>
       <p>
         Rendez-vous sur <a href="https://gungnir.scarletwolf.cloud">gungnir.scarletwolf.cloud</a>,
         choisissez l'option <em>Essai 14 jours</em>. Vous donnez une adresse email,
@@ -58,6 +66,80 @@
         Vous démarrez avec quatre modèles gratuits OpenRouter pré-câblés
         (gpt-oss-120b, glm-4.5-air, laguna-m.1, nemotron-3-super-120b).
         Suffisant pour vous faire un avis sérieux.
+      </p>
+      <p>
+        <strong>Idéal pour :</strong> tester sans rien installer, valider que Gungnir
+        couvre votre cas d'usage, démarrer en 30 secondes.
+      </p>
+    </article>
+
+    <!-- VOIE B : SELF-HOSTED BASIQUE -->
+    <article class="card mb-2">
+      <div class="card__subtitle">Voie B · 10 minutes · Self-hosted basique</div>
+      <h3 style="color: var(--cream); font-family: var(--font-display);">Déploiement Docker clé en main sur votre VPS</h3>
+      <p>
+        Sur un VPS Linux avec Docker installé (4 Go RAM mini, 8 Go recommandé), une seule commande&nbsp;:
+      </p>
+      <pre class="mono" style="background: rgba(0,0,0,0.5); padding: 1em; border-radius: 6px; overflow-x: auto; font-size: 0.85em; margin: 1em 0;"><code>curl -fsSL https://raw.githubusercontent.com/kevinggraphiste-hub/Gungnir/main/install.sh | bash</code></pre>
+      <p>
+        Le script crée un dossier <code>gungnir/</code>, génère les secrets, pull
+        l'image Docker pré-buildée depuis GHCR, démarre Postgres + l'app + le sidecar
+        updater. Vous accédez ensuite à <code>http://votre-vps:8000</code> et créez
+        votre compte admin.
+      </p>
+      <p>
+        <strong>Mises à jour</strong>&nbsp;: automatiques via le sidecar updater.
+        Settings → Mises à jour → toggle "Vérification automatique" et c'est tout.
+        Quand une nouvelle version sort, un point vert apparaît, vous cliquez,
+        c'est fait (rollback auto si le healthcheck échoue).
+      </p>
+      <p>
+        <strong>Idéal pour :</strong> souveraineté complète (vos données chez vous),
+        données sensibles (juridique, santé), instances multiples (par client / par
+        département), production stable.
+      </p>
+      <p class="mt-3">
+        <a href="installation.html" class="btn btn--ghost">Guide d'installation détaillé →</a>
+      </p>
+    </article>
+
+    <!-- VOIE C : SELF-HOSTED DEV -->
+    <article class="card mb-2" style="border-color: rgba(245, 158, 11, 0.4);">
+      <div class="card__subtitle" style="color: #f59e0b;">Voie C · 15 minutes · Self-hosted mode dev (avancé)</div>
+      <h3 style="color: var(--cream); font-family: var(--font-display);">Build source sur votre VPS, code modifiable</h3>
+      <p>
+        Vous clonez le repo, vous buildez l'image localement. Idéal si vous voulez
+        modifier le code, ajouter vos propres plugins en dur, ou auditer ligne par
+        ligne avant déploiement.
+      </p>
+      <pre class="mono" style="background: rgba(0,0,0,0.5); padding: 1em; border-radius: 6px; overflow-x: auto; font-size: 0.85em; margin: 1em 0;"><code>git clone https://github.com/kevinggraphiste-hub/Gungnir.git
+cd Gungnir
+# génère .env avec 3 secrets requis (voir INSTALL.md)
+docker compose up -d --build</code></pre>
+      <div style="background: rgba(245, 158, 11, 0.1); border-left: 3px solid #f59e0b; padding: 0.75em 1em; border-radius: 4px; margin: 1em 0;">
+        <p style="margin: 0; color: var(--cream);"><strong style="color: #f59e0b;">⚠ Disclaimer mode dev</strong></p>
+        <p style="margin: 0.5em 0 0; font-size: 0.95em;">
+          En choisissant cette voie, <strong>vous prenez en charge vos propres
+          mises à jour et la maintenance de votre fork</strong>. Scarlet Wolf
+          ne peut pas garantir la compatibilité de vos modifications avec les
+          versions futures de Gungnir, ni la sécurité des dépendances que vous
+          ajoutez. Le sidecar updater automatique ne fonctionne pas sur le mode
+          build source : c'est à vous de pull les nouveaux tags
+          (<code>git pull && docker compose up -d --build</code>) et de gérer
+          les conflits de merge si vous avez modifié le code core.
+        </p>
+        <p style="margin: 0.5em 0 0; font-size: 0.95em;">
+          Pour rester sous garantie de mise à jour, restez sur la <strong>Voie B</strong>
+          (image Docker pré-buildée, signée, mise à jour vérifiée).
+        </p>
+      </div>
+      <p>
+        <strong>Idéal pour :</strong> développeurs qui veulent contribuer ou
+        forker, audit de sécurité approfondi par votre DSI, intégration de
+        plugins privés non publiables sur la marketplace.
+      </p>
+      <p class="mt-3">
+        <a href="https://github.com/kevinggraphiste-hub/Gungnir/blob/main/INSTALL.md" class="btn btn--ghost">Doc INSTALL.md complète →</a>
       </p>
     </article>
 
