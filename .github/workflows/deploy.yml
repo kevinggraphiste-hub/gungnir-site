@@ -1,0 +1,40 @@
+name: Deploy site to VPS
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:  # déclenchement manuel possible depuis Actions UI
+
+# Pas de permissions write nécessaires : on push rien, on SSH juste
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-site
+  cancel-in-progress: false  # ne pas annuler un deploy en cours, qui pourrait laisser le site dans un état incohérent
+
+jobs:
+  deploy:
+    name: SSH git pull on VPS
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          port: ${{ secrets.VPS_SSH_PORT || 22 }}
+          script: |
+            set -e
+            cd "${{ secrets.VPS_SITE_PATH }}"
+            echo "==> Avant pull :"
+            git log -1 --format="%h %s"
+            git fetch origin main
+            git reset --hard origin/main
+            echo "==> Après pull :"
+            git log -1 --format="%h %s"
+            echo "==> Site mis à jour ($(ls -la index.html | awk '{print $6, $7, $8}'))"
+            # Pas de reload nginx nécessaire : statique pur, nginx sert le nouveau
+            # contenu directement à la prochaine requête.
