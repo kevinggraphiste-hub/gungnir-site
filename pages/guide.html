@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Guide d'utilisation · Gungnir · Scarlet Wolf</title>
-<meta name="description" content="Comment démarrer avec Gungnir : essai 14 jours, premiers pas, configuration de la conscience, plugins et intégrations.">
+<title>Guide de démarrage · Gungnir · Scarlet Wolf</title>
+<meta name="description" content="Démarrer avec Gungnir en quatre étapes : choisir son point de départ, faire connaissance, activer la mémoire, brancher ses outils. Trente minutes suffisent.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -32,208 +32,168 @@
   </div>
 </header>
 
+<!-- ─── INTRO ───────────────────────────────────────────────── -->
 <section class="section" style="padding-top: 80px;">
   <div class="container--narrow">
-    <div class="section-marker">Guide d'utilisation</div>
-    <h1>Démarrer avec Gungnir.</h1>
+    <div class="section-marker">Guide de démarrage</div>
+    <h1>De «&nbsp;je découvre&nbsp;» à «&nbsp;il connaît mon métier&nbsp;».</h1>
     <p class="lead">
-      Quatre étapes pour passer de "je découvre" à "il connaît mon métier".
-      Compter trente minutes pour les trois premières.
+      Quatre étapes, environ trente minutes pour les trois premières. La
+      quatrième se fait tranquillement, à votre rythme.
     </p>
     <p>
-      L'étape 1 a <strong>trois voies au choix</strong> selon votre niveau de souveraineté :
-      essai cloud immédiat, déploiement self-hosted clé en main, ou déploiement self-hosted
-      en mode dev (avec accès au code source). Les étapes 2 à 4 sont identiques pour les trois.
+      Seule la première étape change selon votre point de départ&nbsp;: l'essai
+      en ligne, ou l'installation chez vous. Les étapes 2 à 4 sont identiques
+      dans tous les cas.
     </p>
   </div>
 </section>
 
+<!-- ─── ÉTAPE 1 : POINT DE DÉPART ───────────────────────────── -->
 <section class="section" style="padding-top: 0;">
   <div class="container--narrow">
 
-    <div class="section-marker">Étape 1 · Choisir sa voie de démarrage</div>
+    <div class="section-marker">Étape 1 · Choisir son point de départ</div>
 
-    <!-- VOIE A : ESSAI CLOUD -->
     <article class="card mb-2">
-      <div class="card__subtitle">Voie A · 5 minutes · Cloud Scarlet Wolf</div>
-      <h3 style="color: var(--cream); font-family: var(--font-display);">Essai 14 jours sur notre infrastructure</h3>
+      <div class="card__subtitle">Le plus simple · 5 minutes</div>
+      <h3 style="color: var(--cream); font-family: var(--font-display);">Essai en ligne, 14 jours</h3>
       <p>
-        Rendez-vous sur <a href="https://gungnir.scarletwolf.cloud">gungnir.scarletwolf.cloud</a>,
-        choisissez l'option <em>Essai 14 jours</em>. Vous donnez une adresse email,
-        rien d'autre. Pas de carte bancaire, pas de SIRET, pas de formulaire de
-        qualification.
+        Allez sur <a href="https://gungnir.scarletwolf.cloud">gungnir.scarletwolf.cloud</a>
+        et choisissez «&nbsp;Essai 14 jours&nbsp;». Vous donnez une adresse email,
+        rien d'autre. Pas de carte bancaire, pas de paperasse.
       </p>
       <p>
-        Vous démarrez avec quatre modèles gratuits OpenRouter pré-câblés
-        (gpt-oss-120b, glm-4.5-air, laguna-m.1, nemotron-3-super-120b).
-        Suffisant pour vous faire un avis sérieux.
+        Quatre modèles d'IA sont déjà offerts pendant l'essai. C'est largement
+        suffisant pour vous faire un avis sérieux sur vos vrais dossiers.
       </p>
-      <p>
-        <strong>Idéal pour :</strong> tester sans rien installer, valider que Gungnir
-        couvre votre cas d'usage, démarrer en 30 secondes.
-      </p>
+      <p><strong>Pour qui&nbsp;:</strong> tester sans rien installer, vérifier
+      que Gungnir couvre votre besoin, démarrer en 30&nbsp;secondes.</p>
     </article>
 
-    <!-- VOIE B : SELF-HOSTED BASIQUE -->
     <article class="card mb-2">
-      <div class="card__subtitle">Voie B · 10 minutes · Self-hosted basique</div>
-      <h3 style="color: var(--cream); font-family: var(--font-display);">Déploiement Docker clé en main sur votre VPS</h3>
+      <div class="card__subtitle">Chez vous · 10 minutes</div>
+      <h3 style="color: var(--cream); font-family: var(--font-display);">Installation sur votre serveur, clé en main</h3>
       <p>
-        Sur un VPS Linux avec Docker installé (4 Go RAM mini, 8 Go recommandé), une seule commande&nbsp;:
+        Sur un serveur Linux avec Docker (4&nbsp;Go de mémoire au minimum), une
+        seule commande à coller&nbsp;:
       </p>
       <pre class="mono" style="background: rgba(0,0,0,0.5); padding: 1em; border-radius: 6px; overflow-x: auto; font-size: 0.85em; margin: 1em 0;"><code>curl -fsSL https://raw.githubusercontent.com/kevinggraphiste-hub/Gungnir/main/install.sh | bash</code></pre>
       <p>
-        Le script crée un dossier <code>gungnir/</code>, génère les secrets, pull
-        l'image Docker pré-buildée depuis GHCR, démarre Postgres + l'app + le sidecar
-        updater. Vous accédez ensuite à <code>http://votre-vps:8000</code> et créez
-        votre compte admin.
+        Le script installe tout, démarre Gungnir, et vous accédez à votre
+        instance pour créer votre compte. Les mises à jour se font ensuite
+        toutes seules&nbsp;: un point vert apparaît quand une version sort,
+        vous cliquez, c'est fait (retour arrière automatique si un problème
+        est détecté).
       </p>
-      <p>
-        <strong>Mises à jour</strong>&nbsp;: automatiques via le sidecar updater.
-        Settings → Mises à jour → toggle "Vérification automatique" et c'est tout.
-        Quand une nouvelle version sort, un point vert apparaît, vous cliquez,
-        c'est fait (rollback auto si le healthcheck échoue).
-      </p>
-      <p>
-        <strong>Idéal pour :</strong> souveraineté complète (vos données chez vous),
-        données sensibles (juridique, santé), instances multiples (par client / par
-        département), production stable.
-      </p>
+      <p><strong>Pour qui&nbsp;:</strong> données qui doivent rester chez vous
+      (juridique, santé), plusieurs équipes, production stable.</p>
       <p class="mt-3">
         <a href="installation.html" class="btn btn--ghost">Guide d'installation détaillé →</a>
       </p>
     </article>
 
-    <!-- VOIE C : SELF-HOSTED DEV -->
     <article class="card mb-2" style="border-color: rgba(245, 158, 11, 0.4);">
-      <div class="card__subtitle" style="color: #f59e0b;">Voie C · 15 minutes · Self-hosted mode dev (avancé)</div>
-      <h3 style="color: var(--cream); font-family: var(--font-display);">Build source sur votre VPS, code modifiable</h3>
+      <div class="card__subtitle" style="color: #f59e0b;">Pour développeurs · 15 minutes</div>
+      <h3 style="color: var(--cream); font-family: var(--font-display);">Installation à partir du code source</h3>
       <p>
-        Vous clonez le repo, vous buildez l'image localement. Idéal si vous voulez
-        modifier le code, ajouter vos propres plugins en dur, ou auditer ligne par
-        ligne avant déploiement.
+        Vous récupérez le code et vous le compilez vous-même. Utile pour
+        modifier Gungnir, ajouter vos propres modules, ou faire auditer le
+        code ligne par ligne avant de déployer.
       </p>
       <pre class="mono" style="background: rgba(0,0,0,0.5); padding: 1em; border-radius: 6px; overflow-x: auto; font-size: 0.85em; margin: 1em 0;"><code>git clone https://github.com/kevinggraphiste-hub/Gungnir.git
 cd Gungnir
-# génère .env avec 3 secrets requis (voir INSTALL.md)
+# créez le fichier .env (3 secrets requis, voir INSTALL.md)
 docker compose up -d --build</code></pre>
       <div style="background: rgba(245, 158, 11, 0.1); border-left: 3px solid #f59e0b; padding: 0.75em 1em; border-radius: 4px; margin: 1em 0;">
-        <p style="margin: 0; color: var(--cream);"><strong style="color: #f59e0b;">⚠ Disclaimer mode dev</strong></p>
+        <p style="margin: 0; color: var(--cream);"><strong style="color: #f59e0b;">⚠ À savoir</strong></p>
         <p style="margin: 0.5em 0 0; font-size: 0.95em;">
-          En choisissant cette voie, <strong>vous prenez en charge vos propres
-          mises à jour et la maintenance de votre fork</strong>. Scarlet Wolf
-          ne peut pas garantir la compatibilité de vos modifications avec les
-          versions futures de Gungnir, ni la sécurité des dépendances que vous
-          ajoutez. Le sidecar updater automatique ne fonctionne pas sur le mode
-          build source : c'est à vous de pull les nouveaux tags
-          (<code>git pull && docker compose up -d --build</code>) et de gérer
-          les conflits de merge si vous avez modifié le code core.
-        </p>
-        <p style="margin: 0.5em 0 0; font-size: 0.95em;">
-          Pour rester sous garantie de mise à jour, restez sur la <strong>Voie B</strong>
-          (image Docker pré-buildée, signée, mise à jour vérifiée).
+          Avec cette voie, <strong>vous gérez vous-même vos mises à jour</strong>.
+          Scarlet Wolf ne peut pas garantir la compatibilité de vos modifications
+          avec les versions futures. Pour rester couvert par les mises à jour
+          automatiques, préférez l'installation clé en main ci-dessus.
         </p>
       </div>
-      <p>
-        <strong>Idéal pour :</strong> développeurs qui veulent contribuer ou
-        forker, audit de sécurité approfondi par votre DSI, intégration de
-        plugins privés non publiables sur la marketplace.
-      </p>
+      <p><strong>Pour qui&nbsp;:</strong> développeurs qui veulent contribuer,
+      audit de sécurité approfondi, modules privés.</p>
       <p class="mt-3">
-        <a href="https://github.com/kevinggraphiste-hub/Gungnir/blob/main/INSTALL.md" class="btn btn--ghost">Doc INSTALL.md complète →</a>
+        <a href="https://github.com/kevinggraphiste-hub/Gungnir/blob/main/INSTALL.md" class="btn btn--ghost">Documentation complète →</a>
       </p>
     </article>
 
+  </div>
+</section>
+
+<!-- ─── ÉTAPES 2 À 4 ────────────────────────────────────────── -->
+<section class="section section--alt">
+  <div class="container--narrow">
+    <div class="section-marker">Étapes 2 à 4 · Identiques pour tous</div>
+
     <article class="card mb-2">
       <div class="card__subtitle">Étape 2 · 10 minutes</div>
-      <h3 style="color: var(--cream); font-family: var(--font-display);">L'onboarding conversationnel</h3>
+      <h3 style="color: var(--cream); font-family: var(--font-display);">Faire connaissance</h3>
       <p>
-        Au premier login, votre agent vous pose cinq questions, en conversation
-        naturelle&nbsp;:
+        À la première connexion, votre assistant vous pose cinq questions, en
+        conversation normale&nbsp;:
       </p>
       <ul class="checklist">
         <li>Le <strong>nom</strong> que vous voulez lui donner</li>
         <li>S'il vous <strong>tutoie</strong> ou vous vouvoie</li>
-        <li>Sa <strong>personnalité</strong> (calme, direct, méthodique…)</li>
-        <li>Son <strong>mode d'autonomie</strong> (libre / demande la permission / restreint)</li>
-        <li>Sa <strong>conscience</strong> (Qdrant Cloud recommandé, Qdrant local, ou plus tard)</li>
+        <li>Son <strong>caractère</strong> (calme, direct, méthodique, etc.)</li>
+        <li>Sa <strong>liberté d'action</strong> (autonome, ou il demande avant d'agir)</li>
+        <li>S'il active sa <strong>mémoire</strong> tout de suite ou plus tard</li>
       </ul>
       <p>
-        Pas un formulaire&nbsp;: une vraie conversation. À la fin, votre agent
-        existe · avec son nom, son ton, son cadre.
+        Ce n'est pas un formulaire, c'est une vraie discussion. À la fin, votre
+        assistant existe vraiment&nbsp;: avec son nom, son ton, son cadre.
       </p>
     </article>
 
     <article class="card mb-2">
       <div class="card__subtitle">Étape 3 · 15 minutes</div>
-      <h3 style="color: var(--cream); font-family: var(--font-display);">Brancher la mémoire long-terme</h3>
+      <h3 style="color: var(--cream); font-family: var(--font-display);">Activer la mémoire long terme</h3>
       <p>
-        Si vous avez choisi <em>Qdrant Cloud</em> à l'étape 2, créez un cluster
-        gratuit (1&nbsp;GB inclus) sur
-        <a href="https://cloud.qdrant.io">cloud.qdrant.io</a>. Récupérez l'URL
-        et la clé API, collez-les dans <strong>Paramètres&nbsp;→&nbsp;Conscience</strong>.
+        C'est ce qui fait que votre assistant se souvient d'une fois sur
+        l'autre. Vous créez un espace mémoire gratuit (1&nbsp;Go inclus) sur
+        <a href="https://cloud.qdrant.io">cloud.qdrant.io</a>, vous copiez les
+        deux identifiants fournis dans <strong>Paramètres&nbsp;→&nbsp;Conscience</strong>,
+        et c'est branché.
       </p>
       <p>
-        À partir de cet instant, votre agent se souvient. D'une conversation à
-        l'autre, d'une semaine à l'autre. Il apprend vos préférences, votre
-        contexte, les noms qu'il faut retenir.
+        À partir de là, il retient vos préférences, votre contexte, les noms
+        importants. D'une conversation à l'autre, d'une semaine à l'autre.
       </p>
     </article>
 
-    <article class="card mb-2">
+    <article class="card">
       <div class="card__subtitle">Étape 4 · à votre rythme</div>
       <h3 style="color: var(--cream); font-family: var(--font-display);">Brancher vos outils</h3>
       <p>
-        Onglet <strong>Intégrations</strong>. Connecteurs OAuth disponibles&nbsp;:
-        Google (Gmail, Drive, Calendar, Chat, Contacts), Notion, Linear, ClickUp,
-        Airtable, Slack, Discord, Telegram. Un clic, une autorisation, c'est branché.
+        Onglet <strong>Intégrations</strong>. En un clic et une autorisation,
+        vous connectez Google (Gmail, Drive, Agenda, Contacts), Notion, Linear,
+        ClickUp, Airtable, Slack, Discord, Telegram.
       </p>
       <p>
-        Pour aller plus loin&nbsp;: créez vos workflows <em>Forge</em>
-        (orchestration n8n native), ajoutez vos skills personnalisés, connectez
-        vos canaux de notification (email, Telegram, widget web).
+        Pour aller plus loin, vous pouvez créer des automatisations et des
+        compétences sur mesure. Le détail est sur la
+        <a href="technique.html">page Technique</a>.
       </p>
     </article>
 
-    <blockquote>
-      <p>
-        Gungnir s'adapte à votre métier. Il n'impose pas le sien.
-      </p>
+    <blockquote class="mt-4">
+      <p>Gungnir s'adapte à votre métier. Il ne vous impose pas le sien.</p>
     </blockquote>
-
   </div>
 </section>
 
-<section class="section section--alt">
-  <div class="container--narrow">
-    <div class="section-marker">Aller plus loin</div>
-    <h2 class="mb-4">Documentation détaillée.</h2>
-
-    <div class="grid grid--2">
-      <article class="card">
-        <div class="card__subtitle">Pour utilisateurs avancés</div>
-        <h3 style="color: var(--cream); font-family: var(--font-display);">Forge · workflows visuels</h3>
-        <p>YAML d'abord, canvas React Flow ensuite. Chaîner des étapes (LLM,
-        webhook, MCP, condition, attente humaine) pour automatiser des tâches
-        métier répétitives. Compatible 100&nbsp;% avec n8n.</p>
-      </article>
-      <article class="card">
-        <div class="card__subtitle">Pour les DSI</div>
-        <h3 style="color: var(--cream); font-family: var(--font-display);">Audit, logs, isolation</h3>
-        <p>Logs d'activité par utilisateur, exportables. Audit-ready RGPD. Plan
-        de continuité documenté. Pour les équipes Compliance, deux instances
-        Qdrant séparées (audit / contenu) avec isolation cryptographique.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
+<!-- ─── SUPPORT ─────────────────────────────────────────────── -->
 <section class="section">
   <div class="container--narrow text-center">
-    <h2>Une question pendant votre essai ?</h2>
+    <div class="section-marker" style="justify-content: center;">Un coup de main&nbsp;?</div>
+    <h2>Une question pendant l'essai&nbsp;?</h2>
     <p class="lead" style="margin-left: auto; margin-right: auto;">
-      Vous nous écrivez, on répond sous 24&nbsp;h. Pas de chatbot de support
-      qui vous fait tourner · un humain qui connaît le produit.
+      Vous nous écrivez, on répond sous 24&nbsp;h. Pas de robot de support qui
+      vous fait tourner en rond&nbsp;: un humain qui connaît le produit.
     </p>
     <a href="contact.html" class="btn btn--primary">Nous écrire</a>
   </div>
@@ -244,7 +204,7 @@ docker compose up -d --build</code></pre>
     <div>
       <a href="../index.html" class="brand"><span class="brand-mark"></span><span>Gungnir</span></a>
       <p class="mt-2" style="color: var(--cream-soft); font-size: 0.95em;">
-        L'IA qui s'éveille à votre métier.<br>
+        L'assistant IA qui apprend votre métier.<br>
         Édité par <a href="https://scarletwolf.fr" rel="external">Scarlet Wolf</a> · Suisse / France.
       </p>
     </div>
