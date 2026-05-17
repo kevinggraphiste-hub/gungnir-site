@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Souveraineté · Gungnir · Scarlet Wolf</title>
-<meta name="description" content="VPS européen dédié, BSL auditable, zéro entraînement croisé, effacement 24h certifié, option 100% on-premise Ollama.">
+<title>Souveraineté · Vos données restent les vôtres · Gungnir</title>
+<meta name="description" content="Vos données restent en Europe, à vous, jamais revendues, jamais utilisées pour entraîner d'autres IA. Effacement garanti sous 24 h. Option 100 % chez vous.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -22,6 +22,8 @@
     <nav class="nav" id="primary-nav">
       <a href="../index.html">Accueil</a>
       <a href="souverainete.html" class="active">Souveraineté</a>
+      <a href="technique.html">Technique</a>
+      <a href="installation.html">Installation</a>
       <a href="prix.html">Tarifs</a>
       <a href="guide.html">Guide</a>
       <a href="a-propos.html">À propos</a>
@@ -33,133 +35,162 @@
 <section class="hero" style="min-height: 60vh;">
   <div class="rune-decor rune-decor--tr">ᛟ</div>
   <div class="hero__inner">
-    <div class="hero__eyebrow">Souveraineté · Audit-ready</div>
-    <h1>Vos données vous appartiennent. <span class="accent">Contractuellement.</span></h1>
+    <div class="hero__eyebrow">Souveraineté · Dit simplement</div>
+    <h1>Vos données restent <span class="accent">les vôtres.</span></h1>
     <p class="hero__sub">
-      Pas une promesse marketing. Un engagement écrit, un code source-available
-      et un certificat cryptographique d'effacement.
+      Pas une promesse marketing. Un engagement écrit&nbsp;:<br>
+      en Europe, jamais revendues, effacées sur demande.
     </p>
   </div>
 </section>
 
+<!-- ─── EN UNE PHRASE ─────────────────────────────────────────── -->
 <section class="section">
   <div class="container--narrow">
-    <div class="section-marker">Quatre garanties écrites</div>
+    <div class="section-marker">L'idée, en une phrase</div>
+    <h2 class="mb-3">Ce que vous confiez à Gungnir ne sert qu'à vous.</h2>
+    <p class="lead">
+      Vos dossiers, vos échanges, ce que l'assistant apprend de votre métier&nbsp;:
+      tout ça reste <strong>chez vous, en Europe, et n'enrichit personne d'autre</strong>.
+      Pas de petites lignes, pas de zone grise. C'est écrit dans le contrat, et le
+      code peut être inspecté.
+    </p>
+  </div>
+</section>
+
+<!-- ─── LES 4 ENGAGEMENTS, EN LANGAGE NORMAL ─────────────────── -->
+<section class="section section--alt">
+  <div class="container--narrow">
+    <div class="section-marker">Quatre engagements écrits</div>
     <h2 class="mb-4">Ce que nous ne ferons jamais.</h2>
 
     <article class="card mb-2">
-      <h3 style="color: var(--cream); font-family: var(--font-display);">1. VPS dédié européen</h3>
-      <p>Aucun transfert hors-UE sans votre accord explicite. Nos hébergeurs sont
-      situés en France, Suisse et Allemagne. Pas de "cloud migration" silencieuse,
-      pas de réplication transatlantique opportuniste.</p>
+      <h3 style="color: var(--cream); font-family: var(--font-display);">1. Vos données ne quittent pas l'Europe</h3>
+      <p>
+        Vos informations sont hébergées sur des serveurs en France, en Suisse et
+        en Allemagne. <strong>Aucune copie ne part aux États-Unis « en douce »</strong>,
+        jamais, sans votre accord explicite.
+      </p>
     </article>
 
     <article class="card mb-2">
-      <h3 style="color: var(--cream); font-family: var(--font-display);">2. Code source-available sous BSL</h3>
-      <p>Votre DSI peut inspecter chaque ligne de ce que fait votre IA.
-      <strong>Aucune boîte noire.</strong> Aucun binaire opaque, aucune
-      dépendance de service tiers que vous ne pourriez pas auditer. Après 4 ans,
-      la licence bascule automatiquement en Apache 2.0.</p>
+      <h3 style="color: var(--cream); font-family: var(--font-display);">2. Rien n'est revendu, rien n'entraîne d'autres IA</h3>
+      <p>
+        Vos échanges ne servent <strong>à entraîner aucun modèle</strong> — ni le
+        nôtre, ni celui d'un partenaire, ni celui d'un géant de l'IA. Ce que vous
+        écrivez vous appartient. Point.
+      </p>
     </article>
 
     <article class="card mb-2">
-      <h3 style="color: var(--cream); font-family: var(--font-display);">3. Zéro entraînement croisé</h3>
-      <p>Vos données n'entraînent <strong>aucun modèle</strong>. Ni le nôtre,
-      ni celui d'un partenaire, ni celui d'un fournisseur de LLM. Vos prompts
-      restent vos prompts. Votre conscience reste votre conscience.</p>
+      <h3 style="color: var(--cream); font-family: var(--font-display);">3. Aucune boîte noire</h3>
+      <p>
+        Votre informaticien (ou celui de votre client) peut vérifier <strong>tout
+        ce que fait l'IA</strong> avec vos données&nbsp;: le code est ouvert à
+        l'inspection. Rien d'opaque, rien de caché.
+      </p>
     </article>
 
     <article class="card">
-      <h3 style="color: var(--cream); font-family: var(--font-display);">4. Effacement certifié 24h</h3>
-      <p>Sur demande écrite, suppression complète sous 24 heures avec
-      <strong>certificat cryptographique signé</strong>. Audit-ready RGPD,
-      acceptable par tout superviseur ou commissaire aux comptes.</p>
+      <h3 style="color: var(--cream); font-family: var(--font-display);">4. Effacement garanti en 24 heures</h3>
+      <p>
+        Sur simple demande écrite&nbsp;: suppression totale sous 24&nbsp;h, avec un
+        <strong>justificatif signé</strong> que vous pouvez présenter à un auditeur,
+        un superviseur ou un commissaire aux comptes.
+      </p>
     </article>
   </div>
 </section>
 
+<!-- ─── CE QUE ÇA CHANGE POUR VOUS (CAS CONCRETS) ────────────── -->
+<section class="section">
+  <div class="container">
+    <div class="section-marker">Ce que ça change pour vous</div>
+    <h2 class="mb-4">Trois métiers, trois soucis en moins.</h2>
+    <div class="grid grid--3">
+
+      <article class="card reveal">
+        <div class="card__subtitle">Cabinet d'avocats</div>
+        <h3>Le secret professionnel tient</h3>
+        <p>
+          Vous travaillez sur un dossier sensible. Avec Gungnir, les pièces ne
+          transitent pas par un service américain&nbsp;: vous pouvez l'affirmer à
+          votre client, et le prouver.
+        </p>
+      </article>
+
+      <article class="card reveal">
+        <div class="card__subtitle">Cabinet médical</div>
+        <h3>Conforme, sans usine à gaz</h3>
+        <p>
+          Données de santé = règles strictes. Gungnir peut tourner <strong>entièrement
+          sur votre matériel</strong>, sans rien envoyer dehors&nbsp;: la conformité
+          devient simple à expliquer.
+        </p>
+      </article>
+
+      <article class="card reveal">
+        <div class="card__subtitle">Expert-comptable</div>
+        <h3>L'audit ne vous fait plus peur</h3>
+        <p>
+          Un contrôleur demande où vont les données&nbsp;? Vous montrez le contrat,
+          la traçabilité et le justificatif d'effacement. Dossier clos en cinq minutes.
+        </p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── 100% CHEZ VOUS ───────────────────────────────────────── -->
 <section class="section section--alt">
+  <div class="container--narrow">
+    <div class="section-marker">Le niveau maximal</div>
+    <h2 class="mb-3">Et si vous ne voulez rien envoyer dehors&nbsp;?</h2>
+    <p class="lead">
+      Pour les dossiers les plus sensibles, Gungnir s'installe <strong>entièrement
+      sur vos propres machines, derrière votre pare-feu</strong>. L'intelligence
+      tourne chez vous. <strong>Aucune requête ne sort.</strong> C'est la version
+      exigée par les études notariales sous secret, les hôpitaux, les fiduciaires
+      régulées.
+    </p>
+    <p>
+      Vous pouvez même commencer simple (instance hébergée) puis basculer en
+      «&nbsp;tout chez moi&nbsp;» le jour où vous traitez une affaire critique&nbsp;:
+      <strong>même assistant, même mémoire, même interface</strong>.
+    </p>
+    <div class="text-center mt-4">
+      <a href="contact.html" class="btn btn--primary">Discuter de votre cas</a>
+      <a href="technique.html" class="btn btn--ghost">Le détail technique →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CONFIANCE ────────────────────────────────────────────── -->
+<section class="section">
   <div class="container--narrow">
     <blockquote>
       <p>
-        Conscience Qdrant dédiée à votre entreprise. Un client, une instance.
-        Aucune mutualisation, jamais.
+        Une instance par client. Aucune mutualisation, jamais. Votre mémoire
+        reste votre mémoire.
       </p>
     </blockquote>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="section-marker">Compliance Edition</div>
-    <h2 class="mb-4">100&nbsp;% on-prem possible.</h2>
-
-    <div class="grid grid--2">
-      <div class="card">
-        <div class="card__subtitle">Avec Ollama</div>
-        <h3>Le modèle reste chez vous.</h3>
-        <p>
-          Aucune requête sortante. Le modèle de langage tourne sur vos GPU,
-          dans votre datacenter, derrière votre pare-feu. Gungnir orchestre
-          tout en local. C'est la version exigée par les fiduciaires régulées,
-          les études notariales sous secret, les hôpitaux.
-        </p>
-        <ul class="checklist mt-2">
-          <li>Aucun trafic sortant vers des LLM tiers</li>
-          <li>Modèles 8B à 70B tournables sur infra modeste</li>
-          <li>Sauvegarde et conscience entièrement chez vous</li>
-        </ul>
-      </div>
-      <div class="card">
-        <div class="card__subtitle">Audit &amp; isolation</div>
-        <h3>Deux instances Qdrant séparées.</h3>
-        <p>
-          Une instance pour les logs d'audit (immuables, signés), une instance
-          séparée pour le contenu fonctionnel. Pas de fuite entre les deux,
-          isolation totale. Audit logs natifs, exportables au format de votre
-          superviseur.
-        </p>
-        <ul class="checklist mt-2">
-          <li>Logs d'audit immuables et signés</li>
-          <li>Isolation cryptographique entre utilisateurs</li>
-          <li>SLA et plan de continuité documentés</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="text-center mt-4">
-      <a href="contact.html" class="btn btn--primary">Discuter de votre cas</a>
-    </div>
-  </div>
-</section>
-
-<section class="section section--alt">
-  <div class="container--narrow">
-    <div class="section-marker">Ouverture</div>
-    <h2>Source-available, sans schizophrénie.</h2>
-    <p class="lead">
-      Trois licences, trois philosophies cohérentes&nbsp;:
+    <p class="mt-3" style="color: var(--cream-soft);">
+      Les modalités précises (licence, isolation, journaux d'audit, plan de
+      continuité) sont détaillées sur la <a href="technique.html">page Technique</a>
+      — et nous les montrons en direct lors d'un audit guidé, sans accord de
+      confidentialité requis pour la démo.
     </p>
-    <ul class="checklist mt-2">
-      <li><strong>SpearCode</strong> · Apache 2.0. Génération de code, vraiment libre, vraiment réutilisable.</li>
-      <li><strong>Munnin</strong> · MIT. Couche d'agrégation LLM, prenez-la, faites-en ce que vous voulez.</li>
-      <li><strong>Gungnir complet</strong> · BSL. L'expérience complète, auditable, qui bascule en Apache 2.0 dans 4 ans.</li>
-    </ul>
-    <blockquote class="mt-4">
-      <p>
-        Un écosystème ouvert vaut mieux qu'un produit fermé. Ce qui nous distingue,
-        ce n'est pas la fermeture · c'est l'orchestration.
-      </p>
-    </blockquote>
   </div>
 </section>
 
-<section class="section">
+<!-- ─── CTA ──────────────────────────────────────────────────── -->
+<section class="section section--alt">
   <div class="container--narrow text-center">
-    <h2>Votre DSI veut tout vérifier ?</h2>
+    <h2>Votre informaticien veut tout vérifier&nbsp;?</h2>
     <p class="lead" style="margin-left: auto; margin-right: auto;">
-      Donnez-nous trente minutes. Nous montrons les logs, l'isolation, le code,
-      le plan de continuité, le certificat d'effacement. Sans NDA pour la démo.
+      Donnez-nous trente minutes. On montre la traçabilité, le cloisonnement, le
+      code, le plan de secours, le justificatif d'effacement. En clair, sans jargon.
     </p>
     <div class="hero__ctas" style="justify-content: center;">
       <a href="contact.html" class="btn btn--primary">Demander un audit guidé</a>
@@ -173,7 +204,7 @@
     <div>
       <a href="../index.html" class="brand"><span class="brand-mark"></span><span>Gungnir</span></a>
       <p class="mt-2" style="color: var(--cream-soft); font-size: 0.95em;">
-        L'IA qui s'éveille à votre métier.<br>
+        L'assistant IA qui apprend votre métier.<br>
         Édité par <a href="https://scarletwolf.fr" rel="external">Scarlet Wolf</a> · Suisse / France.
       </p>
     </div>
@@ -181,8 +212,9 @@
       <h4>Produit</h4>
       <ul>
         <li><a href="../index.html">Accueil</a></li>
-        <li><a href="souverainete.html">Souveraineté</a>
-      <a href="installation.html">Installation</a></li>
+        <li><a href="souverainete.html">Souveraineté</a></li>
+        <li><a href="technique.html">Technique</a></li>
+        <li><a href="installation.html">Installation</a></li>
         <li><a href="prix.html">Tarifs</a></li>
         <li><a href="guide.html">Guide</a></li>
       </ul>
