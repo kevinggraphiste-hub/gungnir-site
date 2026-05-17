@@ -381,12 +381,13 @@ blockquote cite {
   display: block;
 }
 .hero__sub {
-  font-size: 1.4em;
+  font-size: 1.3em;
   color: var(--cream-dim);
   margin: 1.2em 0 2em;
-  max-width: 38ch;
-  line-height: 1.4;
+  max-width: 44ch;
+  line-height: 1.45;
   font-style: italic;
+  text-wrap: balance;
 }
 .hero__ctas { display: flex; gap: 16px; flex-wrap: wrap; }
 
