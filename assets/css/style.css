@@ -369,7 +369,12 @@ blockquote cite {
   margin-bottom: 1.5em;
 }
 .hero__title {
-  max-width: 16ch;
+  /* Override scoped au hero (le h1 global monte à 4.5rem → titre éclaté
+     sur 6 lignes). Police réduite + largeur suffisante pour que chacun
+     des 3 segments (texte / accent / fin) tienne sur UNE ligne = 3 lignes. */
+  max-width: min(92vw, 28ch);
+  font-size: clamp(1.9rem, 5vw, 3.4rem);
+  text-wrap: balance;
 }
 .hero__title .accent {
   color: var(--scarlet);
