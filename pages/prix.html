@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tarifs · Gungnir · Scarlet Wolf</title>
-<meta name="description" content="Trois formules Gungnir : Perso (gratuit, chez vous), Standard (hébergé pour vous, devis), Conformité (secteurs sensibles, sur mesure). Essai 14 jours sans carte.">
+<title>Tarifs · Cloud souverain ou Forteresse · Gungnir</title>
+<meta name="description" content="Deux façons : Cloud souverain (hébergé pour vous en Europe) ou Forteresse (100 % chez vous, rien ne sort). Gratuit des deux côtés. Essai 14 jours sans carte.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -32,44 +32,83 @@
   </div>
 </header>
 
-<!-- ─── INTRO ───────────────────────────────────────────────── -->
+<!-- ─── INTRO : LE CHOIX D'AXE ──────────────────────────────── -->
 <section class="section" style="padding-top: 80px;">
   <div class="container--narrow">
     <div class="section-marker">Tarifs</div>
-    <h1>Trois formules. Aucune surprise.</h1>
+    <h1>Deux façons. Une seule question.</h1>
     <p class="lead">
-      Du particulier qui installe Gungnir chez lui gratuitement, au cabinet
-      régulé qui doit tout prouver à son auditeur. Vous choisissez selon votre
-      besoin, pas selon une grille opaque.
+      Où vivent vos données&nbsp;? Chez nous, sur un serveur dédié en Europe.
+      Ou <strong>100&nbsp;% chez vous, sans que rien ne sorte</strong>. Vous
+      choisissez l'axe, puis la formule. Et c'est <strong>gratuit pour
+      démarrer des deux côtés</strong>.
     </p>
   </div>
 </section>
 
-<!-- ─── LES 3 FORMULES ──────────────────────────────────────── -->
+<!-- ─── LES 2 AXES ──────────────────────────────────────────── -->
 <section class="section" style="padding-top: 0;">
   <div class="container">
+    <div class="grid grid--2">
+
+      <article class="card reveal">
+        <div class="card__icon">☁︎</div>
+        <div class="card__subtitle">Axe 1</div>
+        <h3 style="color: var(--cream); font-family: var(--font-display);">Cloud souverain</h3>
+        <p>
+          On héberge Gungnir pour vous, sur un serveur <strong>dédié en
+          Europe</strong>. Vous n'installez rien, on s'occupe des mises à jour
+          et des sauvegardes. Le plus simple pour démarrer vite.
+        </p>
+        <p class="mt-2"><a href="#cloud">Voir les formules Cloud →</a></p>
+      </article>
+
+      <article class="card reveal">
+        <div class="card__icon">ᛟ</div>
+        <div class="card__subtitle">Axe 2</div>
+        <h3 style="color: var(--cream); font-family: var(--font-display);">Forteresse · 100&nbsp;% chez vous</h3>
+        <p>
+          Gungnir tourne <strong>entièrement sur vos machines, derrière votre
+          pare-feu. Rien ne sort.</strong> IA exécutée en local, mémoire chez
+          vous. La sécurité maximale pour les données sensibles.
+        </p>
+        <p class="mt-2"><a href="#forteresse">Voir les formules Forteresse →</a></p>
+      </article>
+
+    </div>
+    <p class="text-center mt-4" style="color: var(--cream-soft);">
+      Vous pouvez <strong>passer de l'un à l'autre</strong> quand vous voulez&nbsp;:
+      même assistant, même mémoire, même interface.
+      <a href="souverainete.html">Comment on garantit la sécurité →</a>
+    </p>
+  </div>
+</section>
+
+<!-- ─── AXE 1 : CLOUD SOUVERAIN ─────────────────────────────── -->
+<section class="section section--alt" id="cloud">
+  <div class="container">
+    <div class="section-marker">☁︎ Cloud souverain · hébergé pour vous</div>
     <div class="pricing-grid">
 
       <article class="price-card">
-        <div class="price-card__name">Perso</div>
-        <div class="price-card__tagline">Chez vous · Gratuit</div>
+        <div class="price-card__name">Essai</div>
+        <div class="price-card__tagline">Cloud · 14 jours</div>
         <div class="price-card__price">Gratuit
-          <small>Vous apportez vos propres clés d'IA</small>
+          <small>Sans carte bancaire</small>
         </div>
         <ul>
-          <li>Code source accessible</li>
-          <li>Installation Docker fournie</li>
-          <li>Documentation publique</li>
-          <li>Communauté Discord</li>
-          <li>Usage particulier (une personne ou un foyer)</li>
+          <li>Compte en 30 secondes</li>
+          <li>Quatre modèles d'IA offerts</li>
+          <li>Vos vrais dossiers, tout de suite</li>
+          <li>Aucun engagement</li>
         </ul>
-        <a href="https://github.com/kevinggraphiste-hub/Gungnir" class="btn btn--ghost">Récupérer le code</a>
+        <a href="https://gungnir.scarletwolf.cloud" class="btn btn--ghost">Démarrer l'essai</a>
       </article>
 
       <article class="price-card price-card--featured">
         <div class="price-card__badge">Le plus choisi</div>
         <div class="price-card__name">Standard</div>
-        <div class="price-card__tagline">Hébergé pour vous</div>
+        <div class="price-card__tagline">Cloud · hébergé &amp; géré</div>
         <div class="price-card__price">Sur devis
           <small>Grille TPE / PME à venir</small>
         </div>
@@ -79,25 +118,66 @@
           <li>Mises à jour et sauvegardes continues</li>
           <li>Mémoire privée, isolée par client</li>
           <li>Support prioritaire</li>
-          <li>Option «&nbsp;tout chez vous&nbsp;», rien ne sort</li>
           <li>1 à 20+ utilisateurs</li>
         </ul>
-        <a href="contact.html" class="btn btn--primary">Démarrer</a>
+        <a href="contact.html" class="btn btn--primary">Demander un devis</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── AXE 2 : FORTERESSE ──────────────────────────────────── -->
+<section class="section" id="forteresse">
+  <div class="container">
+    <div class="section-marker">ᛟ Forteresse · 100&nbsp;% chez vous, rien ne sort</div>
+    <div class="pricing-grid">
+
+      <article class="price-card">
+        <div class="price-card__name">Perso</div>
+        <div class="price-card__tagline">Forteresse · gratuit</div>
+        <div class="price-card__price">Gratuit
+          <small>Vous apportez vos propres clés d'IA</small>
+        </div>
+        <ul>
+          <li>Installation chez vous (Docker fourni)</li>
+          <li>Code source inspectable</li>
+          <li>Documentation publique</li>
+          <li>Communauté Discord</li>
+          <li>Usage particulier (une personne ou un foyer)</li>
+        </ul>
+        <a href="https://github.com/kevinggraphiste-hub/Gungnir" class="btn btn--ghost">Récupérer le code</a>
+      </article>
+
+      <article class="price-card price-card--featured">
+        <div class="price-card__badge">Recommandé pro</div>
+        <div class="price-card__name">Forteresse Pro</div>
+        <div class="price-card__tagline">Installée &amp; maintenue chez vous</div>
+        <div class="price-card__price">Sur devis
+          <small>Selon votre infrastructure</small>
+        </div>
+        <ul>
+          <li>Installée et maintenue sur vos machines</li>
+          <li><strong>IA exécutée en local, aucune requête sortante</strong></li>
+          <li>Mémoire entièrement chez vous</li>
+          <li>Mises à jour accompagnées</li>
+          <li>Support prioritaire</li>
+        </ul>
+        <a href="contact.html" class="btn btn--primary">Demander un devis</a>
       </article>
 
       <article class="price-card">
-        <div class="price-card__name">Conformité</div>
-        <div class="price-card__tagline">Secteurs sensibles · Sur mesure</div>
+        <div class="price-card__name">Forteresse Compliance</div>
+        <div class="price-card__tagline">Secteurs régulés · sur mesure</div>
         <div class="price-card__price">Devis personnalisé
           <small>Périmètre et garanties adaptés</small>
         </div>
         <ul>
           <li>Infrastructure dédiée dimensionnée</li>
-          <li>Intégration à vos outils (ERP, CRM, automatisations)</li>
           <li>Journaux d'audit séparés du contenu</li>
           <li>Cloisonnement total, traçabilité complète</li>
+          <li>Intégration à vos outils (ERP, CRM)</li>
           <li>Compétences et assistants sur mesure</li>
-          <li>Formation de vos équipes</li>
           <li><strong>Accompagnement humain mensuel inclus</strong></li>
         </ul>
         <a href="contact.html" class="btn btn--ghost">Parler à l'équipe</a>
@@ -107,17 +187,47 @@
   </div>
 </section>
 
-<!-- ─── ESSAI ───────────────────────────────────────────────── -->
+<!-- ─── MINI-COMPARATIF ─────────────────────────────────────── -->
 <section class="section section--alt">
   <div class="container--narrow">
-    <div class="section-marker">Essai libre</div>
+    <div class="section-marker">En un coup d'œil</div>
+    <h2 class="mb-4">Cloud ou Forteresse&nbsp;: qu'est-ce qui change&nbsp;?</h2>
+    <div class="grid grid--2">
+      <article class="card">
+        <h3 style="color: var(--cream); font-family: var(--font-display);">☁︎ Cloud souverain</h3>
+        <ul class="checklist mt-2">
+          <li>Hébergé par Scarlet Wolf, serveur dédié en Europe</li>
+          <li>Vous n'installez rien, tout est géré</li>
+          <li>Mises à jour et sauvegardes automatiques</li>
+          <li>Idéal&nbsp;: démarrer vite, équipes, productivité</li>
+          <li>Abonnement prévisible</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3 style="color: var(--cream); font-family: var(--font-display);">ᛟ Forteresse</h3>
+        <ul class="checklist mt-2">
+          <li>Sur vos machines, derrière votre pare-feu</li>
+          <li>IA en local, <strong>aucune requête sortante</strong></li>
+          <li>Mémoire et sauvegardes entièrement chez vous</li>
+          <li>Idéal&nbsp;: données sensibles, régulé, secret pro</li>
+          <li>Gratuit en Perso, devis en Pro / Compliance</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ─── ESSAI ───────────────────────────────────────────────── -->
+<section class="section">
+  <div class="container--narrow text-center">
+    <div class="section-marker" style="justify-content: center;">Essai libre</div>
     <h2>14 jours pour faire connaissance.</h2>
-    <p class="lead">
-      Pas de carte bancaire. Quatre modèles d'IA offerts pour tester sans rien
-      dépenser. Au bout de 14&nbsp;jours, vous décidez&nbsp;: vous branchez vos
-      propres clés, vous passez en Standard, ou vous arrêtez. C'est tout.
+    <p class="lead" style="margin-left: auto; margin-right: auto;">
+      Pas de carte bancaire. Quatre modèles d'IA offerts. Au bout de
+      14&nbsp;jours, vous décidez&nbsp;: vous branchez vos clés, vous passez en
+      Standard, vous installez en Forteresse, ou vous arrêtez. C'est tout.
     </p>
-    <div class="hero__ctas mt-2">
+    <div class="hero__ctas" style="justify-content: center;">
       <a href="https://gungnir.scarletwolf.cloud" class="btn btn--primary">Démarrer l'essai 14&nbsp;jours</a>
       <a href="contact.html" class="btn btn--ghost">Démo guidée</a>
     </div>
@@ -125,40 +235,38 @@
 </section>
 
 <!-- ─── FAQ ─────────────────────────────────────────────────── -->
-<section class="section">
+<section class="section section--alt">
   <div class="container--narrow">
     <div class="section-marker">Questions fréquentes</div>
     <h2 class="mb-4">Vos questions sur les tarifs</h2>
 
     <div class="card mb-2">
+      <h3 style="color: var(--cream); font-family: var(--font-display);">Puis-je passer du Cloud à la Forteresse&nbsp;?</h3>
+      <p>Oui, quand vous voulez. Même assistant, même mémoire, même interface.
+      On organise la bascule&nbsp;: vous commencez simple en Cloud, vous passez
+      en Forteresse le jour d'une affaire sensible.</p>
+    </div>
+
+    <div class="card mb-2">
       <h3 style="color: var(--cream); font-family: var(--font-display);">Y a-t-il un engagement de durée&nbsp;?</h3>
-      <p>Standard&nbsp;: au mois, résiliable à tout moment. Conformité&nbsp;: la
-      durée dépend du périmètre, fixée au devis. Aucune formule ne vous facture
+      <p>Cloud Standard&nbsp;: au mois, résiliable à tout moment. Forteresse&nbsp;:
+      la durée dépend du périmètre, fixée au devis. Aucune formule ne facture
       l'année d'avance sans votre accord.</p>
     </div>
 
     <div class="card mb-2">
       <h3 style="color: var(--cream); font-family: var(--font-display);">Que se passe-t-il à la fin de l'essai&nbsp;?</h3>
-      <p>Vous gardez l'accès en lecture pendant 14&nbsp;jours de plus (le temps
-      d'exporter votre mémoire), puis suppression complète avec justificatif
-      signé. Votre mémoire vous appartient&nbsp;: vous repartez avec.</p>
-    </div>
-
-    <div class="card mb-2">
-      <h3 style="color: var(--cream); font-family: var(--font-display);">Pourquoi le code n'est-il pas 100&nbsp;% libre&nbsp;?</h3>
-      <p>Une partie l'est totalement (génération de code, agrégation d'IA). Ce
-      qui est sous licence «&nbsp;source-available&nbsp;», c'est l'ensemble
-      complet&nbsp;: inspectable par votre informaticien, et qui devient
-      entièrement libre au bout de 4&nbsp;ans. Le détail est sur la
-      <a href="technique.html">page Technique</a>.</p>
+      <p>Lecture seule pendant 14&nbsp;jours de plus (le temps d'exporter votre
+      mémoire), puis suppression complète avec justificatif signé. Votre
+      mémoire vous appartient&nbsp;: vous repartez avec.</p>
     </div>
 
     <div class="card">
-      <h3 style="color: var(--cream); font-family: var(--font-display);">Le Standard est-il vraiment souverain&nbsp;?</h3>
-      <p>Oui&nbsp;: serveur en Europe. Si votre régulateur exige que
-      <strong>rien ne sorte du tout</strong> (IA exécutée sur vos propres
-      machines), c'est l'option «&nbsp;tout chez vous&nbsp;» du Standard, ou la
-      formule Conformité. <a href="souverainete.html">Comment on garantit ça →</a></p>
+      <h3 style="color: var(--cream); font-family: var(--font-display);">La Forteresse est-elle vraiment étanche&nbsp;?</h3>
+      <p>Oui&nbsp;: IA exécutée sur vos propres machines, aucune requête
+      sortante, vérifiable au pare-feu. C'est la version conçue pour les
+      avocats, notaires, médecins, fiduciaires régulées.
+      <a href="souverainete.html">Comment on le garantit →</a></p>
     </div>
   </div>
 </section>
