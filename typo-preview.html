@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Typo preview · 3 stacks à comparer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #111111;
+    --anthracite: #1a1a1a;
+    --bronze: #9a7b56;
+    --bronze-light: #b89468;
+    --scarlet: #c21c27;
+    --cream: #f4f1ea;
+    --cream-dim: rgba(244, 241, 234, 0.85);
+    --border: rgba(154, 123, 86, 0.3);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--black);
+    color: var(--cream);
+    font-family: sans-serif;
+    padding: 40px 24px;
+    min-height: 100vh;
+  }
+  .intro {
+    max-width: 1400px;
+    margin: 0 auto 40px;
+    text-align: center;
+  }
+  .intro h1 {
+    font-family: 'Goldman', sans-serif;
+    font-weight: 700;
+    font-size: 2.5em;
+    color: var(--cream);
+    margin-bottom: 12px;
+  }
+  .intro p {
+    color: var(--cream-dim);
+    font-family: 'Inter', sans-serif;
+    font-size: 1.05em;
+  }
+  .grid {
+    max-width: 1500px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    gap: 24px;
+  }
+  .card {
+    background: var(--anthracite);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 32px;
+  }
+  .card-tag {
+    display: inline-block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--scarlet);
+    padding: 4px 12px;
+    border: 1px solid var(--scarlet);
+    border-radius: 2px;
+    margin-bottom: 20px;
+  }
+  .stack-info {
+    color: var(--bronze-light);
+    font-size: 0.85em;
+    margin-bottom: 28px;
+    font-style: italic;
+  }
+  .label {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--bronze);
+    margin-bottom: 8px;
+    display: block;
+  }
+  .display-title {
+    font-family: 'Goldman', sans-serif;
+    font-weight: 700;
+    font-size: 2em;
+    color: var(--cream);
+    margin-bottom: 16px;
+    line-height: 1.15;
+  }
+  .display-sub {
+    font-family: 'Goldman', sans-serif;
+    font-weight: 400;
+    font-size: 1.3em;
+    color: var(--cream);
+    margin-bottom: 22px;
+  }
+  .lead { font-size: 1.15em; color: var(--cream-dim); margin-bottom: 14px; line-height: 1.6; }
+  .body { font-size: 1em; color: var(--cream-dim); margin-bottom: 14px; line-height: 1.65; }
+  .quote {
+    border-left: 2px solid var(--scarlet);
+    padding-left: 16px;
+    margin: 20px 0;
+    color: var(--cream);
+    font-style: italic;
+    font-size: 1.1em;
+  }
+  .mono-block {
+    margin-top: 18px;
+    padding: 12px 14px;
+    background: var(--black);
+    border-left: 2px solid var(--bronze);
+    color: var(--cream-dim);
+    font-size: 0.9em;
+  }
+
+  /* Option A : Inter + JetBrains Mono */
+  .stack-a .lead, .stack-a .body { font-family: 'Inter', sans-serif; }
+  .stack-a .label, .stack-a .mono-block { font-family: 'JetBrains Mono', monospace; }
+  .stack-a .quote { font-family: 'Inter', sans-serif; }
+
+  /* Option B : IBM Plex */
+  .stack-b .lead, .stack-b .body { font-family: 'IBM Plex Sans', sans-serif; }
+  .stack-b .label, .stack-b .mono-block { font-family: 'IBM Plex Mono', monospace; }
+  .stack-b .quote { font-family: 'IBM Plex Sans', sans-serif; }
+
+  /* Option C : Space */
+  .stack-c .lead, .stack-c .body { font-family: 'Space Grotesk', sans-serif; }
+  .stack-c .label, .stack-c .mono-block { font-family: 'Space Mono', monospace; }
+  .stack-c .quote { font-family: 'Space Grotesk', sans-serif; }
+</style>
+</head>
+<body>
+
+<div class="intro">
+  <h1>Typo preview — 3 stacks à comparer</h1>
+  <p>Même contenu, 3 pairings différents avec Goldman comme display. Choisis celui qui te parle visuellement.</p>
+</div>
+
+<div class="grid">
+
+  <!-- OPTION A -->
+  <article class="card stack-a">
+    <span class="card-tag">Option A</span>
+    <p class="stack-info">Display: Goldman · Body: Inter · Mono: JetBrains Mono</p>
+
+    <span class="label">Premier contact</span>
+    <h2 class="display-title">Un assistant qui apprend votre métier et s'en souvient.</h2>
+    <h3 class="display-sub">Hébergé pour vous, pleine puissance</h3>
+
+    <p class="lead">Gungnir est un assistant intelligent qui travaille avec vous au quotidien. Il rédige, cherche, résume, organise vos dossiers, vous prépare vos journées.</p>
+
+    <p class="body">Au début, c'est un très bon assistant généraliste. Au fil des semaines, il connaît vos dossiers, votre façon de travailler, votre vocabulaire. Et ce n'est pas une IA en roue libre.</p>
+
+    <blockquote class="quote">Une IA qui ne se souvient pas de vous n'est pas un assistant. C'est un moteur de recherche poli.</blockquote>
+
+    <div class="mono-block">$ docker compose up -d gungnir<br>$ tail -f /var/log/gungnir.log</div>
+  </article>
+
+  <!-- OPTION B -->
+  <article class="card stack-b">
+    <span class="card-tag">Option B</span>
+    <p class="stack-info">Display: Goldman · Body: IBM Plex Sans · Mono: IBM Plex Mono</p>
+
+    <span class="label">Premier contact</span>
+    <h2 class="display-title">Un assistant qui apprend votre métier et s'en souvient.</h2>
+    <h3 class="display-sub">Hébergé pour vous, pleine puissance</h3>
+
+    <p class="lead">Gungnir est un assistant intelligent qui travaille avec vous au quotidien. Il rédige, cherche, résume, organise vos dossiers, vous prépare vos journées.</p>
+
+    <p class="body">Au début, c'est un très bon assistant généraliste. Au fil des semaines, il connaît vos dossiers, votre façon de travailler, votre vocabulaire. Et ce n'est pas une IA en roue libre.</p>
+
+    <blockquote class="quote">Une IA qui ne se souvient pas de vous n'est pas un assistant. C'est un moteur de recherche poli.</blockquote>
+
+    <div class="mono-block">$ docker compose up -d gungnir<br>$ tail -f /var/log/gungnir.log</div>
+  </article>
+
+  <!-- OPTION C -->
+  <article class="card stack-c">
+    <span class="card-tag">Option C</span>
+    <p class="stack-info">Display: Goldman · Body: Space Grotesk · Mono: Space Mono</p>
+
+    <span class="label">Premier contact</span>
+    <h2 class="display-title">Un assistant qui apprend votre métier et s'en souvient.</h2>
+    <h3 class="display-sub">Hébergé pour vous, pleine puissance</h3>
+
+    <p class="lead">Gungnir est un assistant intelligent qui travaille avec vous au quotidien. Il rédige, cherche, résume, organise vos dossiers, vous prépare vos journées.</p>
+
+    <p class="body">Au début, c'est un très bon assistant généraliste. Au fil des semaines, il connaît vos dossiers, votre façon de travailler, votre vocabulaire. Et ce n'est pas une IA en roue libre.</p>
+
+    <blockquote class="quote">Une IA qui ne se souvient pas de vous n'est pas un assistant. C'est un moteur de recherche poli.</blockquote>
+
+    <div class="mono-block">$ docker compose up -d gungnir<br>$ tail -f /var/log/gungnir.log</div>
+  </article>
+
+</div>
+
+</body>
+</html>
