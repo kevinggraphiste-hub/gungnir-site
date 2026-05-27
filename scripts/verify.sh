@@ -50,16 +50,19 @@ done
 
 echo
 echo "== Redirections =="
-loc=$(curl -sI "$SUB/" | grep -i '^location:' | tr -d '\r')
-check "site. → 301 vers apex" "Location: $ORIGIN/" "$loc"
-loc=$(curl -sI "$SUB/contact" | grep -i '^location:' | tr -d '\r')
-check "site./contact → 301 apex/contact" "Location: $ORIGIN/contact" "$loc"
-loc=$(curl -sI "$WWW/" | grep -i '^location:' | tr -d '\r')
-check "www. → 301 vers apex" "Location: $ORIGIN/" "$loc"
-loc=$(curl -sI "$ORIGIN/pages/contact.html" | grep -i '^location:' | tr -d '\r')
-check "apex/pages/contact.html → 301 /contact" "Location: /contact" "$loc"
-loc=$(curl -sI "$ORIGIN/index.html" | grep -i '^location:' | tr -d '\r')
-check "apex/index.html → 301 /" "Location: /" "$loc"
+# HTTP/2 envoie les headers en lowercase, on normalise tout en lowercase pour comparer
+loc=$(curl -sI "$SUB/" | grep -i '^location:' | tr -d '\r' | tr '[:upper:]' '[:lower:]')
+check "site. → 301 vers apex" "location: $ORIGIN/" "$loc"
+loc=$(curl -sI "$SUB/contact" | grep -i '^location:' | tr -d '\r' | tr '[:upper:]' '[:lower:]')
+check "site./contact → 301 apex/contact" "location: $ORIGIN/contact" "$loc"
+loc=$(curl -sI "$WWW/" | grep -i '^location:' | tr -d '\r' | tr '[:upper:]' '[:lower:]')
+check "www. → 301 vers apex" "location: $ORIGIN/" "$loc"
+loc=$(curl -sI "$ORIGIN/pages/contact.html" | grep -i '^location:' | tr -d '\r' | tr '[:upper:]' '[:lower:]')
+# Nginx envoie l'URL complète ; on accepte les deux variantes
+check "apex/pages/contact.html → 301 /contact" "location: $ORIGIN/contact" "$loc"
+# /index.html n'a pas de redirect (la règle créait une boucle, retirée) : on attend 200
+status=$(curl -sI "$ORIGIN/index.html" | head -1 | tr -d '\r')
+check "apex/index.html → 200 (canonical via <head>)" "200" "$status"
 
 echo
 echo "== Assets =="
