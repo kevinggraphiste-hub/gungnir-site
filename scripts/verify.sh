@@ -29,14 +29,14 @@ check "llms.txt 200"     "200" "$(curl -sI "$ORIGIN/llms.txt" | head -1)"
 
 echo
 echo "== Pages clean URLs (200) =="
-for path in / /souverainete /technique /prix /installation /guide /a-propos /contact; do
+for path in / /souverainete /technique /prix /guide /a-propos /contact; do
     code=$(curl -sI "$ORIGIN$path" | head -1)
     check "GET $path" "200" "$code"
 done
 
 echo
 echo "== Heads complets =="
-for path in / /souverainete /technique /prix /installation /guide /a-propos /contact; do
+for path in / /souverainete /technique /prix /guide /a-propos /contact; do
     html=$(curl -s "$ORIGIN$path")
     title=$(echo "$html" | grep -oE '<title>[^<]+</title>' | head -1)
     desc=$(echo "$html" | grep -oE '<meta name="description"[^>]*>' | head -1)
@@ -63,6 +63,9 @@ check "apex/pages/contact.html → 301 /contact" "location: $ORIGIN/contact" "$l
 # /index.html n'a pas de redirect (la règle créait une boucle, retirée) : on attend 200
 status=$(curl -sI "$ORIGIN/index.html" | head -1 | tr -d '\r')
 check "apex/index.html → 200 (canonical via <head>)" "200" "$status"
+# /installation fusionnée dans /guide depuis 2026-05-27 → 301
+loc=$(curl -sI "$ORIGIN/installation" | grep -i '^location:' | tr -d '\r' | tr '[:upper:]' '[:lower:]')
+check "apex/installation → 301 /guide" "location: $ORIGIN/guide" "$loc"
 
 echo
 echo "== Assets =="
