@@ -1,0 +1,41 @@
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Démarrer avec Gungnir",
+  "description": "Quatre étapes pour passer de la découverte à un assistant qui connaît votre métier. Environ 30 minutes pour les trois premières, la quatrième se fait à votre rythme.",
+  "totalTime": "PT30M",
+  "supply": [
+    { "@type": "HowToSupply", "name": "Adresse email (pour l'essai en ligne)" },
+    { "@type": "HowToSupply", "name": "Serveur Linux avec Docker, 4 Go RAM mini (pour l'installation chez vous)" }
+  ],
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "Choisir son point de départ",
+      "text": "Trois voies au choix : essai en ligne 14 jours sans CB (le plus simple), installation clé en main sur votre serveur Linux via Docker (curl install.sh), ou installation à partir du code source pour développeurs.",
+      "url": "https://scarletwolf.cloud/guide#etape-1"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "Faire connaissance",
+      "text": "À la première connexion, votre assistant vous pose cinq questions en conversation normale : son nom, le tutoiement, son caractère, sa liberté d'action, et l'activation de la mémoire."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "Activer la mémoire long terme",
+      "text": "Créez un espace mémoire gratuit (1 Go inclus) sur cloud.qdrant.io, copiez les deux identifiants dans Paramètres → Conscience. L'assistant retient désormais vos préférences, votre contexte, les noms importants d'une conversation à l'autre."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 4,
+      "name": "Brancher vos outils",
+      "text": "Onglet Intégrations : en un clic et une autorisation, connectez Google (Gmail, Drive, Agenda, Contacts), Notion, Linear, ClickUp, Airtable, Slack, Discord, Telegram."
+    }
+  ]
+}
+</script>

@@ -3,16 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Guide de démarrage · Gungnir · Scarlet Wolf</title>
-<meta name="description" content="Démarrer avec Gungnir en quatre étapes : choisir son point de départ, faire connaissance, activer la mémoire, brancher ses outils. Trente minutes suffisent.">
+<title>Guide & installation · Gungnir · Scarlet Wolf</title>
+<meta name="description" content="Démarrer avec Gungnir en quatre étapes : choisir son point de départ (Cloud, Docker clé en main, source), faire connaissance, activer la mémoire, brancher ses outils. Trente minutes suffisent.">
 
 <link rel="canonical" href="https://scarletwolf.cloud/guide">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Scarlet Wolf">
-<meta property="og:title" content="Guide de démarrage en 4 étapes">
-<meta property="og:description" content="De « je découvre » à « il connaît mon métier » en 4 étapes. Configuration, mémoire long terme, intégrations. Environ 30 minutes.">
+<meta property="og:title" content="Guide de démarrage & installation en 4 étapes">
+<meta property="og:description" content="De « je découvre » à « il connaît mon métier » en 4 étapes. Cloud souverain ou Docker self-hosted, mémoire long terme, intégrations. Environ 30 minutes.">
 <meta property="og:url" content="https://scarletwolf.cloud/guide">
 <meta property="og:image" content="https://scarletwolf.cloud/assets/img/og/default.jpg">
 <meta property="og:image:width" content="1200">
@@ -21,8 +21,8 @@
 <meta property="og:locale" content="fr_FR">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Guide de démarrage en 4 étapes">
-<meta name="twitter:description" content="De « je découvre » à « il connaît mon métier » en 4 étapes. Configuration, mémoire long terme, intégrations. Environ 30 minutes.">
+<meta name="twitter:title" content="Guide de démarrage & installation en 4 étapes">
+<meta name="twitter:description" content="De « je découvre » à « il connaît mon métier » en 4 étapes. Cloud souverain ou Docker self-hosted, mémoire long terme, intégrations. Environ 30 minutes.">
 <meta name="twitter:image" content="https://scarletwolf.cloud/assets/img/og/default.jpg">
 
 <link rel="icon" href="/favicon.ico" sizes="32x32">
@@ -78,6 +78,47 @@
   ]
 }
 </script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Démarrer avec Gungnir",
+  "description": "Quatre étapes pour passer de la découverte à un assistant qui connaît votre métier. Environ 30 minutes pour les trois premières, la quatrième se fait à votre rythme.",
+  "totalTime": "PT30M",
+  "supply": [
+    { "@type": "HowToSupply", "name": "Adresse email (pour l'essai en ligne)" },
+    { "@type": "HowToSupply", "name": "Serveur Linux avec Docker, 4 Go RAM mini (pour l'installation chez vous)" }
+  ],
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "Choisir son point de départ",
+      "text": "Trois voies au choix : essai en ligne 14 jours sans CB (le plus simple), installation clé en main sur votre serveur Linux via Docker (curl install.sh), ou installation à partir du code source pour développeurs.",
+      "url": "https://scarletwolf.cloud/guide#etape-1"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "Faire connaissance",
+      "text": "À la première connexion, votre assistant vous pose cinq questions en conversation normale : son nom, le tutoiement, son caractère, sa liberté d'action, et l'activation de la mémoire."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "Activer la mémoire long terme",
+      "text": "Créez un espace mémoire gratuit (1 Go inclus) sur cloud.qdrant.io, copiez les deux identifiants dans Paramètres → Conscience. L'assistant retient désormais vos préférences, votre contexte, les noms importants d'une conversation à l'autre."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 4,
+      "name": "Brancher vos outils",
+      "text": "Onglet Intégrations : en un clic et une autorisation, connectez Google (Gmail, Drive, Agenda, Contacts), Notion, Linear, ClickUp, Airtable, Slack, Discord, Telegram."
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <header class="site-header">
@@ -91,7 +132,6 @@
       <a href="/">Accueil</a>
       <a href="/souverainete">Souveraineté</a>
       <a href="/technique">Technique</a>
-      <a href="/installation">Installation</a>
       <a href="/prix">Tarifs</a>
       <a href="/guide" class="active">Guide</a>
       <a href="/a-propos">À propos</a>
@@ -127,13 +167,14 @@
       <div class="card__subtitle">Le plus simple · 5 minutes</div>
       <h3 style="color: var(--cream); font-family: var(--font-display);">Essai en ligne, 14 jours</h3>
       <p>
-        Allez sur <a href="https://gungnir.scarletwolf.cloud">gungnir.scarletwolf.cloud</a>
-        et choisissez «&nbsp;Essai 14 jours&nbsp;». Vous donnez une adresse email,
-        rien d'autre. Pas de carte bancaire, pas de paperasse.
+        Allez sur <a href="https://gungnir.scarletwolf.cloud/?trial=1">gungnir.scarletwolf.cloud</a>
+        et choisissez «&nbsp;Essai 14 jours&nbsp;». Vous donnez une adresse email
+        (ou OAuth Google / GitHub), rien d'autre. Pas de carte bancaire, pas de paperasse.
       </p>
       <p>
-        Quatre modèles d'IA sont déjà offerts pendant l'essai. C'est largement
-        suffisant pour vous faire un avis sérieux sur vos vrais dossiers.
+        Quatre modèles d'IA sont déjà offerts pendant l'essai (Llama, Mistral,
+        Gemini Flash, Claude Haiku via OpenRouter). C'est largement suffisant
+        pour vous faire un avis sérieux sur vos vrais dossiers.
       </p>
       <p><strong>Pour qui&nbsp;:</strong> tester sans rien installer, vérifier
       que Gungnir couvre votre besoin, démarrer en 30&nbsp;secondes.</p>
@@ -143,22 +184,21 @@
       <div class="card__subtitle">Chez vous · 10 minutes</div>
       <h3 style="color: var(--cream); font-family: var(--font-display);">Installation sur votre serveur, clé en main</h3>
       <p>
-        Sur un serveur Linux avec Docker (4&nbsp;Go de mémoire au minimum), une
+        Pré-requis&nbsp;: un serveur Linux avec Docker installé, 4&nbsp;Go de
+        RAM minimum (8&nbsp;Go recommandé), 20&nbsp;Go de stockage libre. Une
         seule commande à coller&nbsp;:
       </p>
       <pre class="mono" style="background: rgba(0,0,0,0.5); padding: 1em; border-radius: 6px; overflow-x: auto; font-size: 0.85em; margin: 1em 0;"><code>curl -fsSL https://raw.githubusercontent.com/kevinggraphiste-hub/Gungnir/main/install.sh | bash</code></pre>
       <p>
-        Le script installe tout, démarre Gungnir, et vous accédez à votre
-        instance pour créer votre compte. Les mises à jour se font ensuite
-        toutes seules&nbsp;: un point vert apparaît quand une version sort,
-        vous cliquez, c'est fait (retour arrière automatique si un problème
-        est détecté).
+        Le script télécharge tout, génère les secrets, démarre Postgres, l'app
+        et le sidecar de mise à jour. Vous accédez ensuite à
+        <code>http://votre-vps:8000</code> et créez votre compte admin. Les
+        mises à jour se font ensuite toutes seules&nbsp;: un point vert
+        apparaît quand une version sort, vous cliquez, c'est fait (retour
+        arrière automatique si un problème est détecté).
       </p>
       <p><strong>Pour qui&nbsp;:</strong> données qui doivent rester chez vous
       (juridique, santé), plusieurs équipes, production stable.</p>
-      <p class="mt-3">
-        <a href="/installation" class="btn btn--ghost">Guide d'installation détaillé →</a>
-      </p>
     </article>
 
     <article class="card mb-2" style="border-color: rgba(245, 158, 11, 0.4);">
@@ -171,7 +211,8 @@
       </p>
       <pre class="mono" style="background: rgba(0,0,0,0.5); padding: 1em; border-radius: 6px; overflow-x: auto; font-size: 0.85em; margin: 1em 0;"><code>git clone https://github.com/kevinggraphiste-hub/Gungnir.git
 cd Gungnir
-# créez le fichier .env (3 secrets requis, voir INSTALL.md)
+# créez le fichier .env (3 secrets requis : DATABASE_URL,
+# GUNGNIR_SECRET_KEY, GUNGNIR_UPDATER_SECRET — voir INSTALL.md)
 docker compose up -d --build</code></pre>
       <div style="background: rgba(245, 158, 11, 0.1); border-left: 3px solid #f59e0b; padding: 0.75em 1em; border-radius: 4px; margin: 1em 0;">
         <p style="margin: 0; color: var(--cream);"><strong style="color: #f59e0b;">⚠ À savoir</strong></p>
@@ -254,19 +295,74 @@ docker compose up -d --build</code></pre>
   </div>
 </section>
 
-<!-- ─── SUPPORT ─────────────────────────────────────────────── -->
+<!-- ─── ALLER PLUS LOIN ─────────────────────────────────────── -->
 <section class="section">
-  <div class="container--narrow text-center">
-    <div class="section-marker" style="justify-content: center;">Un coup de main&nbsp;?</div>
-    <h2>Une question pendant l'essai&nbsp;?</h2>
-    <p class="lead" style="margin-left: auto; margin-right: auto;">
-      Vous nous écrivez, on répond sous 24&nbsp;h. Pas de robot de support qui
-      vous fait tourner en rond&nbsp;: un humain qui connaît le produit.
-    </p>
-    <a href="/contact" class="btn btn--primary">Nous écrire</a>
+  <div class="container">
+    <div class="section-marker">Aller plus loin</div>
+    <h2 class="mb-3">Configurer, étendre, maintenir.</h2>
+
+    <div class="grid grid--3">
+
+      <article class="card reveal">
+        <div class="card__subtitle">Vos propres modèles d'IA</div>
+        <h3>Au-delà des 4 modèles offerts</h3>
+        <p>
+          <strong>Settings → Fournisseurs IA</strong>. Une clé API OpenRouter
+          débloque 8 providers d'un coup&nbsp;; vous pouvez aussi configurer
+          Anthropic, OpenAI, Mistral directement. Pour le mode 100&nbsp;%
+          local, ajoutez Ollama (tourne sur votre machine, rien ne sort).
+        </p>
+      </article>
+
+      <article class="card reveal">
+        <div class="card__subtitle">Marketplace</div>
+        <h3>Modules de la communauté</h3>
+        <p>
+          <strong>Réglages → Marketplace</strong>. Parcourez les modules
+          publiés par la communauté&nbsp;: voix premium, automatisations
+          métier, intégrations spécialisées. Vous pouvez aussi publier les
+          vôtres pour les partager.
+        </p>
+      </article>
+
+      <article class="card reveal">
+        <div class="card__subtitle">Maintenance</div>
+        <h3>Mises à jour et backups</h3>
+        <p>
+          <strong>Settings → Mises à jour</strong> active la vérification
+          automatique (fetch GitHub toutes les 6&nbsp;h). Quand une version
+          sort, un point vert apparaît dans la sidebar, vous cliquez, le
+          sidecar build et healthcheck (rollback auto en cas d'échec).
+        </p>
+        <p>
+          <strong>Settings → Backup</strong> exporte tout (utilisateurs,
+          conversations, conscience, plugins, configs) en ZIP. Restoration
+          en uploadant le ZIP. Compatible entre instances, vous pouvez
+          migrer d'un VPS à un autre.
+        </p>
+      </article>
+
+    </div>
   </div>
 </section>
 
+<!-- ─── SUPPORT ─────────────────────────────────────────────── -->
+<section class="section section--alt">
+  <div class="container--narrow text-center">
+    <div class="section-marker" style="justify-content: center;">Un coup de main&nbsp;?</div>
+    <h2>On peut le faire ensemble.</h2>
+    <p class="lead" style="margin-left: auto; margin-right: auto;">
+      Une question pendant l'essai, pas envie de toucher à Docker, ou besoin
+      d'un coup de main pour configurer la mémoire&nbsp;? Réservez 30&nbsp;minutes,
+      on s'en occupe avec vous. Un humain qui connaît le produit, sous
+      24&nbsp;h ouvrées.
+    </p>
+    <div class="hero__ctas" style="justify-content: center;">
+      <a href="/contact" class="btn btn--primary">Réserver 30 min</a>
+      <a href="https://github.com/kevinggraphiste-hub/Gungnir/blob/main/INSTALL.md" class="btn btn--ghost">Doc INSTALL.md complète</a>
+    </div>
+  </div>
+</section>
 <footer class="site-footer">
   <div class="site-footer__inner">
     <div>
@@ -282,9 +378,8 @@ docker compose up -d --build</code></pre>
         <li><a href="/">Accueil</a></li>
         <li><a href="/souverainete">Souveraineté</a></li>
         <li><a href="/technique">Technique</a></li>
-        <li><a href="/installation">Installation</a></li>
         <li><a href="/prix">Tarifs</a></li>
-        <li><a href="/guide">Guide</a></li>
+        <li><a href="/guide">Guide &amp; installation</a></li>
       </ul>
     </div>
     <div>
