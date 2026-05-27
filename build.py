@@ -61,9 +61,9 @@ PAGES = [
     {
         "slug": "technique",
         "title": "Technique · Architecture, plugins, stack · Gungnir",
-        "description": "Le détail technique de Gungnir : architecture cognitive Soul/Skill/Personnalité, conscience vectorielle v4, 11 plugins, stack souveraine (Ollama, Qdrant, OpenRouter, Forge), self-host Docker, sécurité et licences.",
-        "og_title": "Technique · Architecture, plugins, stack",
-        "og_description": "Architecture full-stack FastAPI/React/PostgreSQL, conscience vectorielle v4, 14 providers LLM, 11 plugins, 100 % local possible via Ollama + Qdrant.",
+        "description": "Le détail technique de Gungnir v5 : architecture cognitive Soul/Skill/Personnalité, conscience vectorielle per-user (le game changer), 11 plugins, 14 providers LLM (8 natifs + 6 OpenAI-compatibles), stack souveraine Python/FastAPI/PostgreSQL/React, self-host Docker, BSL 1.1.",
+        "og_title": "Technique · Architecture, conscience, plugins",
+        "og_description": "Architecture full-stack FastAPI/React/PostgreSQL 16, conscience vectorielle per-user isolée et exportable, 14 providers LLM, 11 plugins, 100 % local possible via Ollama + Qdrant.",
         "footer_tagline":  DEFAULT_TAGLINE,
         "footer_location": DEFAULT_LOC,
         "dest": "pages/technique.html",
