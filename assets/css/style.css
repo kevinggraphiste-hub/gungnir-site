@@ -22,8 +22,8 @@
   --border-strong: rgba(154, 123, 86, 0.3);
 
   --font-display: 'Goldman', sans-serif;
-  --font-body: 'Cormorant Garamond', Georgia, serif;
-  --font-mono: 'JetBrains Mono', monospace;
+  --font-body: 'Space Grotesk', sans-serif;
+  --font-mono: 'Space Mono', monospace;
 
   --container: 1200px;
   --container-narrow: 920px;
