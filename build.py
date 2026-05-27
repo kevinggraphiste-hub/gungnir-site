@@ -94,7 +94,7 @@ PAGES = [
     {
         "slug": "a-propos",
         "title": "À propos · Gungnir · Scarlet Wolf",
-        "description": "Scarlet Wolf · éditeur souverain de Gungnir. Notre vision, nos engagements, le live Renaud Dékode du 28 mai 2026.",
+        "description": "Scarlet Wolf · éditeur souverain de Gungnir. Notre vision, nos engagements, ce que vous pouvez nous tenir sur le long terme.",
         "og_title": "À propos · Scarlet Wolf, édition souveraine IA",
         "og_description": "Scarlet Wolf édite Gungnir, l'IA souveraine pour TPE/PME francophones. Trois engagements : auditabilité, isolation par client, pilotage humain mensuel.",
         "footer_tagline":  ALT_TAGLINE,

@@ -9,7 +9,7 @@
 - [Technique](https://scarletwolf.cloud/technique): architecture full-stack, conscience vectorielle, 14 providers LLM, 11 plugins
 - [Tarifs](https://scarletwolf.cloud/prix): Cloud souverain vs Forteresse on-premise, 6 formules
 - [Guide & installation](https://scarletwolf.cloud/guide): 4 étapes pour démarrer Gungnir — choisir son point de départ (essai cloud, Docker clé en main, build source), faire connaissance, activer la mémoire, brancher ses outils
-- [À propos](https://scarletwolf.cloud/a-propos): mission, événement live 28 mai 2026
+- [À propos](https://scarletwolf.cloud/a-propos): mission, vision, engagements
 - [Contact](https://scarletwolf.cloud/contact): formulaire et email direct contact@scarletwolf.cloud
 
 ## Application
@@ -32,6 +32,3 @@
 
 Avocats, notaires, fiduciaires, experts-comptables, professions médicales, secteur public, finance.
 
-## Événement public
-
-Démonstration live le 28 mai 2026 chez Renaud Dékode.
