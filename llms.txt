@@ -5,13 +5,13 @@
 ## Pages principales
 
 - [Accueil](https://scarletwolf.cloud/): vue d'ensemble du produit Gungnir, promesses, métiers cibles
-- [Souveraineté](https://scarletwolf.cloud/pages/souverainete.html): quatre engagements écrits sur la protection des données
-- [Technique](https://scarletwolf.cloud/pages/technique.html): architecture full-stack, conscience vectorielle, 14 providers LLM, 11 plugins
-- [Tarifs](https://scarletwolf.cloud/pages/prix.html): Cloud souverain vs Forteresse on-premise, 6 formules
-- [Installation](https://scarletwolf.cloud/pages/installation.html): essai cloud, déploiement Docker, build source
-- [Guide de démarrage](https://scarletwolf.cloud/pages/guide.html): 4 étapes pour configurer Gungnir
-- [À propos](https://scarletwolf.cloud/pages/a-propos.html): mission, événement live 28 mai 2026
-- [Contact](https://scarletwolf.cloud/pages/contact.html): formulaire et email direct contact@scarletwolf.cloud
+- [Souveraineté](https://scarletwolf.cloud/souverainete): quatre engagements écrits sur la protection des données
+- [Technique](https://scarletwolf.cloud/technique): architecture full-stack, conscience vectorielle, 14 providers LLM, 11 plugins
+- [Tarifs](https://scarletwolf.cloud/prix): Cloud souverain vs Forteresse on-premise, 6 formules
+- [Installation](https://scarletwolf.cloud/installation): essai cloud, déploiement Docker, build source
+- [Guide de démarrage](https://scarletwolf.cloud/guide): 4 étapes pour configurer Gungnir
+- [À propos](https://scarletwolf.cloud/a-propos): mission, événement live 28 mai 2026
+- [Contact](https://scarletwolf.cloud/contact): formulaire et email direct contact@scarletwolf.cloud
 
 ## Application
 

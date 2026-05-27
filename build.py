@@ -128,10 +128,10 @@ PAGES = [
 ]
 
 
-def build_nav(active_slug: str, root: str, pages: str) -> str:
+def build_nav(active_slug: str) -> str:
     lines = []
     for slug, label, is_cta in NAV:
-        href = f"{root}index.html" if slug == "index" else f"{pages}{slug}.html"
+        href = CLEAN_URL[slug]
         classes = []
         if slug == active_slug:
             classes.append("active")
@@ -150,14 +150,24 @@ def read_optional(path: Path) -> str:
     return "\n" + path.read_text(encoding="utf-8").rstrip("\n")
 
 
+CLEAN_URL = {
+    "index":        "/",
+    "souverainete": "/souverainete",
+    "technique":    "/technique",
+    "installation": "/installation",
+    "prix":         "/prix",
+    "guide":        "/guide",
+    "a-propos":     "/a-propos",
+    "contact":      "/contact",
+}
+
+
 def canonical_for(page: dict) -> str:
-    return f"{SITE_ORIGIN}/" if page["dest"] == "index.html" else f"{SITE_ORIGIN}/{page['dest']}"
+    return SITE_ORIGIN + CLEAN_URL[page["slug"]]
 
 
 def render(page: dict) -> str:
     slug = page["slug"]
-    root = "" if page["at_root"] else "../"
-    pages = "pages/" if page["at_root"] else ""
 
     head   = (PARTIALS / "head.html").read_text(encoding="utf-8")
     header = (PARTIALS / "header.html").read_text(encoding="utf-8")
@@ -167,7 +177,7 @@ def render(page: dict) -> str:
     head_extras = read_optional(PAGES_SRC / f"{slug}.head.html")
     jsonld_page = read_optional(JSONLD_DIR / f"{slug}.html")
 
-    nav = build_nav(slug, root, pages)
+    nav = build_nav(slug)
 
     output = head + header + body + footer
     replacements = {
@@ -178,8 +188,6 @@ def render(page: dict) -> str:
         "{{OG_DESCRIPTION}}":  page.get("og_description", page["description"]),
         "{{OG_IMAGE_URL}}":    page.get("og_image_url", DEFAULT_OG),
         "{{OG_IMAGE_ALT}}":    page.get("og_image_alt", DEFAULT_ALT),
-        "{{ROOT}}":            root,
-        "{{PAGES}}":           pages,
         "{{HEAD_EXTRAS}}":     head_extras,
         "{{JSONLD_PAGE}}":     jsonld_page,
         "{{NAV_LINKS}}":       nav,
