@@ -10,45 +10,49 @@ Garamond + JetBrains Mono).
 
 ```
 gungnir_site/
-├── index.html              # Landing
-├── pages/
-│   ├── souverainete.html   # DA souveraine (BSL, on-prem, audit)
-│   ├── prix.html           # Personal / Standard / Compliance
-│   ├── guide.html          # Guide d'utilisation
-│   ├── a-propos.html       # Vision Scarlet Wolf + live 28 mai
-│   └── contact.html        # Form mailto + démo 30 min
-├── assets/
-│   ├── css/style.css       # CSS partagé
-│   ├── js/main.js          # Menu mobile + reveal scroll
-│   └── img/                # (vide — à alimenter avec photos / mockups)
+├── src/
+│   ├── partials/
+│   │   ├── head.html       # <head> commun (templated)
+│   │   ├── header.html     # <header> + nav commune (templated)
+│   │   └── footer.html     # <footer> commun (templated)
+│   └── pages/
+│       ├── index.html      # body de la home
+│       ├── souverainete.html
+│       ├── technique.html
+│       ├── installation.html
+│       ├── prix.html
+│       ├── guide.html
+│       ├── a-propos.html
+│       ├── contact.html
+│       └── contact.head.html  # <style> inline spécifique au form
+├── build.py                # assemble src/ → racine + pages/ (HTML statique)
+├── index.html              # SORTIE générée — ne pas éditer à la main
+├── pages/*.html            # SORTIE générée — ne pas éditer à la main
+├── assets/{css,js,img}/
 └── README.md
+```
+
+## Workflow
+
+Toute modification se fait dans `src/` (partials + pages + métadonnées
+dans `build.py`). Avant chaque commit :
+
+```bash
+python3 build.py    # regénère index.html et pages/*.html
+git status          # vérifier les fichiers modifiés
 ```
 
 ## Aperçu local
 
-Ouvrir simplement `index.html` dans le navigateur, ou démarrer un serveur
-statique :
-
 ```bash
-cd gungnir_site
 python3 -m http.server 8080
 # puis http://localhost:8080
 ```
 
 ## Déploiement
 
-Site 100% statique, pas de PHP, pas de build. Trois options selon le besoin :
-
-### A. IONOS FTP
-Uploader le dossier complet via FileZilla dans le `htdocs` du domaine
-cible (un sous-domaine type `site.scarletwolf.cloud` ou un futur
-domaine dédié — voir aussi B/C ci-dessous).
-
-### B. Cloudflare Pages / Netlify / Vercel
-Drag & drop du dossier complet — déploiement immédiat avec HTTPS automatique.
-
-### C. Sous-domaine côté Hostinger (cohérent avec gungnir.scarletwolf.cloud)
-Upload via FTP ou git push si le repo est branché.
+Auto-deploy via GitHub Actions à chaque push `main` : SSH sur le VPS,
+`git pull`, Nginx sert le HTML statique directement. Pas de build distant.
 
 ## Contenu
 

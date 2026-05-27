@@ -1,0 +1,244 @@
+
+<section class="hero" style="min-height: 56vh;">
+  <div class="rune-decor rune-decor--tr">ᚷ</div>
+  <div class="rune-decor rune-decor--bl">ᚱ</div>
+  <div class="hero__inner">
+    <div class="hero__eyebrow">Pour les profils techniques</div>
+    <h1>Sous le <span class="accent">capot</span>.</h1>
+    <p class="hero__sub">
+      Architecture, mémoire, modèles, plugins, sécurité, licences.<br>
+      Le jargon est ici : assumé, documenté, sans rien cacher.
+    </p>
+  </div>
+</section>
+
+<!-- ─── VUE D'ENSEMBLE ───────────────────────────────────────── -->
+<section class="section">
+  <div class="container--narrow">
+    <div class="section-marker">Vue d'ensemble</div>
+    <h2 class="mb-3">Une plateforme full-stack, pas un wrapper.</h2>
+    <p class="lead">
+      Gungnir est un super-assistant full-stack&nbsp;: backend <strong>FastAPI
+      (Python)</strong>, frontend <strong>React + Vite + TypeScript</strong>, base
+      <strong>PostgreSQL 16</strong>, le tout conteneurisé Docker. Architecture à
+      <strong>plugins</strong> (manifest&nbsp;+&nbsp;routes), agent outillé (système
+      de tools «&nbsp;WOLF&nbsp;»), conscience vectorielle persistante, et
+      <strong>14&nbsp;providers LLM</strong> supportés (OpenRouter par défaut,
+      Anthropic, OpenAI, Google, MiniMax, Ollama, etc.).
+    </p>
+    <blockquote>
+      <p>
+        L'apprentissage continu existe partout. Le pilotage humain de cet
+        apprentissage, non. C'est la signature Scarlet Wolf.
+      </p>
+    </blockquote>
+  </div>
+</section>
+
+<!-- ─── ARCHITECTURE COGNITIVE ───────────────────────────────── -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-marker">Architecture cognitive</div>
+    <h2 class="mb-3">Soul · Skill · Personnalité&nbsp;: trois couches indépendantes.</h2>
+    <p class="lead">
+      Là où la plupart des IA empilent des prompts dans une seule ficelle, Gungnir
+      sépare trois couches réglables séparément&nbsp;: identité stable
+      <em>et</em> compétences ciselées.
+    </p>
+    <div class="grid grid--3 mt-4">
+      <article class="card reveal">
+        <div class="card__icon">ᛞ</div>
+        <div class="card__subtitle">Couche 1 · Soul</div>
+        <h3>Qui il est</h3>
+        <p>Formality (tu/vous), formation, convictions, ton. Posée à l'onboarding,
+        persistée par utilisateur, évolue par revue humaine. Stockée hors-prompt,
+        injectée au runtime.</p>
+      </article>
+      <article class="card reveal">
+        <div class="card__icon">ᚱ</div>
+        <div class="card__subtitle">Couche 2 · Skills</div>
+        <h3>Ce qu'il sait faire</h3>
+        <p>Chaque compétence est un module isolé et composable (rédaction, recherche
+        jurisprudentielle, analyse PDF, génération de code). Améliorées par revue,
+        sans polluer l'identité.</p>
+      </article>
+      <article class="card reveal">
+        <div class="card__icon">ᛉ</div>
+        <div class="card__subtitle">Couche 3 · Personnalité</div>
+        <h3>Comment il agit</h3>
+        <p>Mode opératoire du moment&nbsp;: concis pour un brief, exploratoire pour
+        du brainstorming. Bascule en un clic, sans réécrire l'identité ni les skills.</p>
+      </article>
+    </div>
+    <p class="text-center mt-3" style="color: var(--cream-dim);">
+      Résultat&nbsp;: un agent qui ne perd pas son identité quand il change de tâche,
+      et ne change pas de compétence quand il change d'humeur.
+    </p>
+  </div>
+</section>
+
+<!-- ─── CONSCIENCE V4 ────────────────────────────────────────── -->
+<section class="section">
+  <div class="container">
+    <div class="section-marker">Conscience vectorielle v4</div>
+    <h2 class="mb-3">La mémoire qui humanise l'apprentissage continu.</h2>
+    <div class="grid grid--2">
+      <div class="reveal">
+        <p class="lead">
+          Une conscience <strong>par utilisateur</strong>, isolée, exportable. Elle
+          structure ce que l'agent retient et déclenche des comportements proactifs
+          au bon moment.
+        </p>
+        <ul class="checklist mt-3">
+          <li><strong>7 boucles automatiques</strong>&nbsp;: think, challenger, simulation, impulse, consolidation, goals, etc.</li>
+          <li><strong>5 besoins fondamentaux</strong> + <strong>13 triggers</strong> câblés</li>
+          <li>Kill-switch 3 paliers, garde-fou diagnostic→action (confirmation avant geste système)</li>
+          <li>Export complet à tout moment, isolation par user et par instance</li>
+        </ul>
+      </div>
+      <div class="card reveal">
+        <div class="card__subtitle">Backends vectoriels supportés</div>
+        <h3 style="color: var(--cream); font-family: var(--font-display);">Qdrant · Pinecone · Chroma · Supabase</h3>
+        <p>
+          Choix du store selon votre contrainte&nbsp;: Qdrant dédié (recommandé
+          souveraineté), Chroma embarqué (100&nbsp;% local), Pinecone/Supabase
+          (managé). Logs d'audit possibles sur une instance séparée du contenu
+          fonctionnel.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── LES 11 PLUGINS ───────────────────────────────────────── -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-marker">Modularité · 11 plugins</div>
+    <h2 class="mb-4">Tout est plugin (manifest + routes).</h2>
+    <div class="grid grid--3">
+      <article class="card reveal"><h3>Forge</h3><p>Orchestrateur de workflows YAML + canvas React Flow. Publication marketplace avec censure auto des secrets/PII.</p></article>
+      <article class="card reveal"><h3>Valkyrie</h3><p>Project management interne (cards, sprints, kanban). Gestion de tags complète, exposée à l'agent.</p></article>
+      <article class="card reveal"><h3>SpearCode</h3><p>IDE intégré&nbsp;: explorateur, éditeur multi-onglets, terminal, panneau IA. Isolé en iframe.</p></article>
+      <article class="card reveal"><h3>Conscience</h3><p>Mémoire vectorielle v4, boucles auto, besoins, triggers, kill-switch.</p></article>
+      <article class="card reveal"><h3>Voice</h3><p>Voix temps réel&nbsp;: STT/TTS, streaming par phrase, providers cloud ou local.</p></article>
+      <article class="card reveal"><h3>Channels</h3><p>Telegram, Discord, Slack&nbsp;: l'agent vous joint là où vous êtes.</p></article>
+      <article class="card reveal"><h3>Model&nbsp;Guide</h3><p>Catalogue + benchmarks 100&nbsp;% live (LMArena Elo, Aider, pricing OpenRouter).</p></article>
+      <article class="card reveal"><h3>Analytics</h3><p>Coûts, tokens, budgets, Token Hygiene, par utilisateur et par conversation.</p></article>
+      <article class="card reveal"><h3>HuntR · Browser · Webhooks · Scheduler</h3><p>Recherche web, automatisations, intégrations entrantes, tâches planifiées.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ─── STACK SOUVERAINE / 100% LOCAL ────────────────────────── -->
+<section class="section">
+  <div class="container">
+    <div class="grid grid--2">
+      <div class="reveal">
+        <div class="section-marker">Souveraineté technique</div>
+        <h2>100&nbsp;% local possible, sans compromis.</h2>
+        <p class="lead">
+          Sur données juridiques/médicales/défense, le cloud est interdit. Gungnir
+          tourne entièrement sur votre machine ou votre VPS, sans appel externe.
+        </p>
+        <ul class="checklist mt-3">
+          <li><strong>LLM local via Ollama</strong>&nbsp;: Llama, Mistral, Qwen, Phi, etc. (8B à 70B sur infra modeste)</li>
+          <li><strong>Mémoire vectorielle locale</strong>&nbsp;: Qdrant ou ChromaDB embarqués</li>
+          <li><strong>Voix locale</strong>&nbsp;: Whisper.cpp (transcription), piper-tts (synthèse)</li>
+          <li><strong>Recherche locale</strong>&nbsp;: index full-text, pas d'API web</li>
+          <li><strong>Aucune télémétrie sortante</strong>&nbsp;: vérifiable au pare-feu</li>
+        </ul>
+      </div>
+      <div class="card reveal">
+        <div class="card__subtitle">Briques de la stack</div>
+        <h3 style="color: var(--cream); font-family: var(--font-display);">Composants</h3>
+        <ul class="checklist mt-2">
+          <li><strong>Ollama</strong>&nbsp;: modèles locaux, option 100&nbsp;% on-prem</li>
+          <li><strong>Qdrant</strong>&nbsp;: mémoire vectorielle dédiée</li>
+          <li><strong>OpenRouter</strong>&nbsp;: agrégation multi-providers LLM (cloud)</li>
+          <li><strong>Forge</strong>&nbsp;: orchestration workflows YAML (type n8n)</li>
+          <li><strong>9 providers de recherche</strong>&nbsp;: DuckDuckGo, Tavily, Brave, Exa, etc.</li>
+          <li><strong>4 providers vocal</strong>&nbsp;: ElevenLabs, OpenAI Realtime, Gemini Live, Grok</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SELF-HOST ────────────────────────────────────────────── -->
+<section class="section section--alt">
+  <div class="container--narrow">
+    <div class="section-marker">Déploiement self-host</div>
+    <h2 class="mb-3">Une commande, Docker, à vous.</h2>
+    <p class="lead">
+      Installation clé en main via Docker&nbsp;:
+    </p>
+    <p><code>curl -fsSL https://&lt;votre-source&gt;/install.sh | bash</code></p>
+    <ul class="checklist mt-3">
+      <li>OAuth Google / GitHub configurable</li>
+      <li>Marketplace publique pour ajouter des plugins community (signés Ed25519)</li>
+      <li>Mises à jour par tag SemVer&nbsp;: déploiement automatisé (build + healthcheck + rollback)</li>
+      <li>Sauvegardes intégrées, restauration documentée</li>
+    </ul>
+    <p class="mt-3">
+      <a href="installation.html" class="btn btn--ghost">Guide d'installation complet →</a>
+    </p>
+  </div>
+</section>
+
+<!-- ─── SÉCURITÉ & ISOLATION ─────────────────────────────────── -->
+<section class="section">
+  <div class="container">
+    <div class="section-marker">Sécurité &amp; isolation</div>
+    <h2 class="mb-4">Cloisonnement par conception.</h2>
+    <div class="grid grid--3">
+      <article class="card reveal">
+        <h3>Par utilisateur</h3>
+        <p>État, config, triggers, mémoire&nbsp;: tout est instancié par utilisateur. Une clé API d'un user ne peut jamais servir un autre.</p>
+      </article>
+      <article class="card reveal">
+        <h3>Journaux d'audit</h3>
+        <p>Logs immuables et signés, possibilité d'une instance vectorielle d'audit séparée du contenu, export au format de votre superviseur.</p>
+      </article>
+      <article class="card reveal">
+        <h3>Effacement certifié</h3>
+        <p>Suppression complète &lt;24&nbsp;h avec certificat cryptographique signé. Audit-ready RGPD.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ─── LICENCES ─────────────────────────────────────────────── -->
+<section class="section section--alt">
+  <div class="container--narrow">
+    <div class="section-marker">Licences</div>
+    <h2>Source-available, sans schizophrénie.</h2>
+    <p class="lead">Trois licences, trois philosophies cohérentes&nbsp;:</p>
+    <ul class="checklist mt-2">
+      <li><strong>SpearCode</strong> (Apache 2.0) : génération de code, vraiment libre et réutilisable.</li>
+      <li><strong>Munnin</strong> (MIT) : couche d'agrégation LLM, prenez-la, faites-en ce que vous voulez.</li>
+      <li><strong>Gungnir complet</strong> (BSL) : l'expérience complète, auditable, qui bascule en Apache&nbsp;2.0 après 4&nbsp;ans.</li>
+    </ul>
+    <blockquote class="mt-4">
+      <p>
+        Un écosystème ouvert vaut mieux qu'un produit fermé. Ce qui nous distingue,
+        ce n'est pas la fermeture, c'est l'orchestration.
+      </p>
+    </blockquote>
+  </div>
+</section>
+
+<!-- ─── CTA ──────────────────────────────────────────────────── -->
+<section class="section">
+  <div class="container--narrow text-center">
+    <h2>Une question d'architecte&nbsp;?</h2>
+    <p class="lead" style="margin-left: auto; margin-right: auto;">
+      Audit guidé du code, des logs, de l'isolation et du plan de continuité,
+      sans accord de confidentialité pour la démo.
+    </p>
+    <div class="hero__ctas" style="justify-content: center;">
+      <a href="contact.html" class="btn btn--primary">Demander un audit guidé</a>
+      <a href="../index.html" class="btn btn--ghost">← Retour à l'essentiel</a>
+    </div>
+  </div>
+</section>
+

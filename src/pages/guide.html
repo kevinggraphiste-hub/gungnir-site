@@ -1,0 +1,168 @@
+
+<!-- ─── INTRO ───────────────────────────────────────────────── -->
+<section class="section" style="padding-top: 80px;">
+  <div class="container--narrow">
+    <div class="section-marker">Guide de démarrage</div>
+    <h1>De «&nbsp;je découvre&nbsp;» à «&nbsp;il connaît mon métier&nbsp;».</h1>
+    <p class="lead">
+      Quatre étapes, environ trente minutes pour les trois premières. La
+      quatrième se fait tranquillement, à votre rythme.
+    </p>
+    <p>
+      Seule la première étape change selon votre point de départ&nbsp;: l'essai
+      en ligne, ou l'installation chez vous. Les étapes 2 à 4 sont identiques
+      dans tous les cas.
+    </p>
+  </div>
+</section>
+
+<!-- ─── ÉTAPE 1 : POINT DE DÉPART ───────────────────────────── -->
+<section class="section" style="padding-top: 0;">
+  <div class="container--narrow">
+
+    <div class="section-marker">Étape 1 · Choisir son point de départ</div>
+
+    <article class="card mb-2">
+      <div class="card__subtitle">Le plus simple · 5 minutes</div>
+      <h3 style="color: var(--cream); font-family: var(--font-display);">Essai en ligne, 14 jours</h3>
+      <p>
+        Allez sur <a href="https://gungnir.scarletwolf.cloud">gungnir.scarletwolf.cloud</a>
+        et choisissez «&nbsp;Essai 14 jours&nbsp;». Vous donnez une adresse email,
+        rien d'autre. Pas de carte bancaire, pas de paperasse.
+      </p>
+      <p>
+        Quatre modèles d'IA sont déjà offerts pendant l'essai. C'est largement
+        suffisant pour vous faire un avis sérieux sur vos vrais dossiers.
+      </p>
+      <p><strong>Pour qui&nbsp;:</strong> tester sans rien installer, vérifier
+      que Gungnir couvre votre besoin, démarrer en 30&nbsp;secondes.</p>
+    </article>
+
+    <article class="card mb-2">
+      <div class="card__subtitle">Chez vous · 10 minutes</div>
+      <h3 style="color: var(--cream); font-family: var(--font-display);">Installation sur votre serveur, clé en main</h3>
+      <p>
+        Sur un serveur Linux avec Docker (4&nbsp;Go de mémoire au minimum), une
+        seule commande à coller&nbsp;:
+      </p>
+      <pre class="mono" style="background: rgba(0,0,0,0.5); padding: 1em; border-radius: 6px; overflow-x: auto; font-size: 0.85em; margin: 1em 0;"><code>curl -fsSL https://raw.githubusercontent.com/kevinggraphiste-hub/Gungnir/main/install.sh | bash</code></pre>
+      <p>
+        Le script installe tout, démarre Gungnir, et vous accédez à votre
+        instance pour créer votre compte. Les mises à jour se font ensuite
+        toutes seules&nbsp;: un point vert apparaît quand une version sort,
+        vous cliquez, c'est fait (retour arrière automatique si un problème
+        est détecté).
+      </p>
+      <p><strong>Pour qui&nbsp;:</strong> données qui doivent rester chez vous
+      (juridique, santé), plusieurs équipes, production stable.</p>
+      <p class="mt-3">
+        <a href="installation.html" class="btn btn--ghost">Guide d'installation détaillé →</a>
+      </p>
+    </article>
+
+    <article class="card mb-2" style="border-color: rgba(245, 158, 11, 0.4);">
+      <div class="card__subtitle" style="color: #f59e0b;">Pour développeurs · 15 minutes</div>
+      <h3 style="color: var(--cream); font-family: var(--font-display);">Installation à partir du code source</h3>
+      <p>
+        Vous récupérez le code et vous le compilez vous-même. Utile pour
+        modifier Gungnir, ajouter vos propres modules, ou faire auditer le
+        code ligne par ligne avant de déployer.
+      </p>
+      <pre class="mono" style="background: rgba(0,0,0,0.5); padding: 1em; border-radius: 6px; overflow-x: auto; font-size: 0.85em; margin: 1em 0;"><code>git clone https://github.com/kevinggraphiste-hub/Gungnir.git
+cd Gungnir
+# créez le fichier .env (3 secrets requis, voir INSTALL.md)
+docker compose up -d --build</code></pre>
+      <div style="background: rgba(245, 158, 11, 0.1); border-left: 3px solid #f59e0b; padding: 0.75em 1em; border-radius: 4px; margin: 1em 0;">
+        <p style="margin: 0; color: var(--cream);"><strong style="color: #f59e0b;">⚠ À savoir</strong></p>
+        <p style="margin: 0.5em 0 0; font-size: 0.95em;">
+          Avec cette voie, <strong>vous gérez vous-même vos mises à jour</strong>.
+          Scarlet Wolf ne peut pas garantir la compatibilité de vos modifications
+          avec les versions futures. Pour rester couvert par les mises à jour
+          automatiques, préférez l'installation clé en main ci-dessus.
+        </p>
+      </div>
+      <p><strong>Pour qui&nbsp;:</strong> développeurs qui veulent contribuer,
+      audit de sécurité approfondi, modules privés.</p>
+      <p class="mt-3">
+        <a href="https://github.com/kevinggraphiste-hub/Gungnir/blob/main/INSTALL.md" class="btn btn--ghost">Documentation complète →</a>
+      </p>
+    </article>
+
+  </div>
+</section>
+
+<!-- ─── ÉTAPES 2 À 4 ────────────────────────────────────────── -->
+<section class="section section--alt">
+  <div class="container--narrow">
+    <div class="section-marker">Étapes 2 à 4 · Identiques pour tous</div>
+
+    <article class="card mb-2">
+      <div class="card__subtitle">Étape 2 · 10 minutes</div>
+      <h3 style="color: var(--cream); font-family: var(--font-display);">Faire connaissance</h3>
+      <p>
+        À la première connexion, votre assistant vous pose cinq questions, en
+        conversation normale&nbsp;:
+      </p>
+      <ul class="checklist">
+        <li>Le <strong>nom</strong> que vous voulez lui donner</li>
+        <li>S'il vous <strong>tutoie</strong> ou vous vouvoie</li>
+        <li>Son <strong>caractère</strong> (calme, direct, méthodique, etc.)</li>
+        <li>Sa <strong>liberté d'action</strong> (autonome, ou il demande avant d'agir)</li>
+        <li>S'il active sa <strong>mémoire</strong> tout de suite ou plus tard</li>
+      </ul>
+      <p>
+        Ce n'est pas un formulaire, c'est une vraie discussion. À la fin, votre
+        assistant existe vraiment&nbsp;: avec son nom, son ton, son cadre.
+      </p>
+    </article>
+
+    <article class="card mb-2">
+      <div class="card__subtitle">Étape 3 · 15 minutes</div>
+      <h3 style="color: var(--cream); font-family: var(--font-display);">Activer la mémoire long terme</h3>
+      <p>
+        C'est ce qui fait que votre assistant se souvient d'une fois sur
+        l'autre. Vous créez un espace mémoire gratuit (1&nbsp;Go inclus) sur
+        <a href="https://cloud.qdrant.io">cloud.qdrant.io</a>, vous copiez les
+        deux identifiants fournis dans <strong>Paramètres&nbsp;→&nbsp;Conscience</strong>,
+        et c'est branché.
+      </p>
+      <p>
+        À partir de là, il retient vos préférences, votre contexte, les noms
+        importants. D'une conversation à l'autre, d'une semaine à l'autre.
+      </p>
+    </article>
+
+    <article class="card">
+      <div class="card__subtitle">Étape 4 · à votre rythme</div>
+      <h3 style="color: var(--cream); font-family: var(--font-display);">Brancher vos outils</h3>
+      <p>
+        Onglet <strong>Intégrations</strong>. En un clic et une autorisation,
+        vous connectez Google (Gmail, Drive, Agenda, Contacts), Notion, Linear,
+        ClickUp, Airtable, Slack, Discord, Telegram.
+      </p>
+      <p>
+        Pour aller plus loin, vous pouvez créer des automatisations et des
+        compétences sur mesure. Le détail est sur la
+        <a href="technique.html">page Technique</a>.
+      </p>
+    </article>
+
+    <blockquote class="mt-4">
+      <p>Gungnir s'adapte à votre métier. Il ne vous impose pas le sien.</p>
+    </blockquote>
+  </div>
+</section>
+
+<!-- ─── SUPPORT ─────────────────────────────────────────────── -->
+<section class="section">
+  <div class="container--narrow text-center">
+    <div class="section-marker" style="justify-content: center;">Un coup de main&nbsp;?</div>
+    <h2>Une question pendant l'essai&nbsp;?</h2>
+    <p class="lead" style="margin-left: auto; margin-right: auto;">
+      Vous nous écrivez, on répond sous 24&nbsp;h. Pas de robot de support qui
+      vous fait tourner en rond&nbsp;: un humain qui connaît le produit.
+    </p>
+    <a href="contact.html" class="btn btn--primary">Nous écrire</a>
+  </div>
+</section>
+
