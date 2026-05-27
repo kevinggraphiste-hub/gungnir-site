@@ -11,6 +11,11 @@ ROOT = Path(__file__).parent
 SRC = ROOT / "src"
 PARTIALS = SRC / "partials"
 PAGES_SRC = SRC / "pages"
+JSONLD_DIR = PARTIALS / "jsonld"
+
+SITE_ORIGIN  = "https://scarletwolf.cloud"
+DEFAULT_OG   = f"{SITE_ORIGIN}/assets/img/og/default.jpg"
+DEFAULT_ALT  = "Gungnir, l'assistant IA souverain pour TPE/PME francophones"
 
 
 NAV = [
@@ -21,7 +26,7 @@ NAV = [
     ("prix",         "Tarifs",                 False),
     ("guide",        "Guide",                  False),
     ("a-propos",     "À propos",               False),
-    ("contact",      "Démo&nbsp;30&nbsp;min",  True),   # bouton CTA
+    ("contact",      "Démo&nbsp;30&nbsp;min",  True),
 ]
 
 
@@ -30,11 +35,14 @@ ALT_TAGLINE     = "L'IA qui s'éveille à votre métier."
 DEFAULT_LOC     = " · Suisse / France"
 COMMA_LOC       = ", Suisse / France"
 
+
 PAGES = [
     {
         "slug": "index",
         "title": "Gungnir : l'assistant IA qui apprend votre métier · Scarlet Wolf",
         "description": "Gungnir, l'assistant IA privé qui apprend votre métier et s'en souvient. Hébergé en Europe, à vous, sans engagement. Essai 14 jours, démo 30 min.",
+        "og_title": "Gungnir · L'assistant IA qui apprend votre métier",
+        "og_description": "Un assistant qui apprend votre métier et s'en souvient. Pas un chatbot qui oublie tout. Votre IA privée, hébergée en Europe.",
         "footer_tagline":  DEFAULT_TAGLINE,
         "footer_location": COMMA_LOC,
         "dest": "index.html",
@@ -44,6 +52,8 @@ PAGES = [
         "slug": "souverainete",
         "title": "Souveraineté · Vos données restent les vôtres · Gungnir",
         "description": "Vos données restent en Europe, à vous, jamais revendues, jamais utilisées pour entraîner d'autres IA. Effacement garanti sous 24 h. Option 100 % chez vous.",
+        "og_title": "Souveraineté · Vos données restent les vôtres",
+        "og_description": "Quatre engagements écrits : hébergement Europe, aucun entraînement de modèles tiers, code auditable, effacement sous 24 h. Mode Forteresse 100 % on-premise.",
         "footer_tagline":  DEFAULT_TAGLINE,
         "footer_location": DEFAULT_LOC,
         "dest": "pages/souverainete.html",
@@ -53,6 +63,8 @@ PAGES = [
         "slug": "technique",
         "title": "Technique · Architecture, plugins, stack · Gungnir",
         "description": "Le détail technique de Gungnir : architecture cognitive Soul/Skill/Personnalité, conscience vectorielle v4, 11 plugins, stack souveraine (Ollama, Qdrant, OpenRouter, Forge), self-host Docker, sécurité et licences.",
+        "og_title": "Technique · Architecture, plugins, stack",
+        "og_description": "Architecture full-stack FastAPI/React/PostgreSQL, conscience vectorielle v4, 14 providers LLM, 11 plugins, 100 % local possible via Ollama + Qdrant.",
         "footer_tagline":  DEFAULT_TAGLINE,
         "footer_location": DEFAULT_LOC,
         "dest": "pages/technique.html",
@@ -62,6 +74,8 @@ PAGES = [
         "slug": "installation",
         "title": "Installation · Gungnir",
         "description": "Installer Gungnir : essai cloud immédiat ou self-hosted Docker en une commande. Guide complet pas à pas.",
+        "og_title": "Installation · Docker self-hosted ou essai Cloud",
+        "og_description": "Installation Gungnir en une commande Docker, ou essai Cloud 14 jours sans carte bancaire. Pré-requis Linux 4 Go RAM. Tutoriel pas à pas.",
         "footer_tagline":  ALT_TAGLINE,
         "footer_location": COMMA_LOC,
         "dest": "pages/installation.html",
@@ -71,6 +85,8 @@ PAGES = [
         "slug": "prix",
         "title": "Tarifs · Cloud souverain ou Forteresse · Gungnir",
         "description": "Deux façons : Cloud souverain (hébergé pour vous en Europe) ou Forteresse (100 % chez vous, rien ne sort). Gratuit des deux côtés. Essai 14 jours sans carte.",
+        "og_title": "Tarifs · Cloud souverain ou Forteresse",
+        "og_description": "Deux axes : Cloud souverain hébergé en Europe ou Forteresse 100 % on-premise. Six formules de l'essai gratuit 14 jours à la Compliance Edition. Sans engagement.",
         "footer_tagline":  DEFAULT_TAGLINE,
         "footer_location": DEFAULT_LOC,
         "dest": "pages/prix.html",
@@ -80,6 +96,8 @@ PAGES = [
         "slug": "guide",
         "title": "Guide de démarrage · Gungnir · Scarlet Wolf",
         "description": "Démarrer avec Gungnir en quatre étapes : choisir son point de départ, faire connaissance, activer la mémoire, brancher ses outils. Trente minutes suffisent.",
+        "og_title": "Guide de démarrage en 4 étapes",
+        "og_description": "De « je découvre » à « il connaît mon métier » en 4 étapes. Configuration, mémoire long terme, intégrations. Environ 30 minutes.",
         "footer_tagline":  DEFAULT_TAGLINE,
         "footer_location": DEFAULT_LOC,
         "dest": "pages/guide.html",
@@ -89,6 +107,8 @@ PAGES = [
         "slug": "a-propos",
         "title": "À propos · Gungnir · Scarlet Wolf",
         "description": "Scarlet Wolf · éditeur souverain de Gungnir. Notre vision, nos engagements, le live Renaud Dékode du 28 mai 2026.",
+        "og_title": "À propos · Scarlet Wolf, édition souveraine IA",
+        "og_description": "Scarlet Wolf édite Gungnir, l'IA souveraine pour TPE/PME francophones. Trois engagements : auditabilité, isolation par client, pilotage humain mensuel.",
         "footer_tagline":  ALT_TAGLINE,
         "footer_location": DEFAULT_LOC,
         "dest": "pages/a-propos.html",
@@ -98,6 +118,8 @@ PAGES = [
         "slug": "contact",
         "title": "Contact · Gungnir · Scarlet Wolf",
         "description": "Réservez une démo Gungnir de 30 minutes. Sans engagement, sans carte bancaire, sans formulaire de qualification.",
+        "og_title": "Contact · Démo 30 min de Gungnir",
+        "og_description": "Demandez une démo de 30 minutes de Gungnir. Pas de formulaire labyrinthique, pas de CB. Réponse humaine sous 24 h ouvrées. Email direct : contact@scarletwolf.cloud.",
         "footer_tagline":  ALT_TAGLINE,
         "footer_location": DEFAULT_LOC,
         "dest": "pages/contact.html",
@@ -121,6 +143,17 @@ def build_nav(active_slug: str, root: str, pages: str) -> str:
     return "\n".join(lines)
 
 
+def read_optional(path: Path) -> str:
+    """Returns file content prefixed with \\n, or '' if missing."""
+    if not path.exists():
+        return ""
+    return "\n" + path.read_text(encoding="utf-8").rstrip("\n")
+
+
+def canonical_for(page: dict) -> str:
+    return f"{SITE_ORIGIN}/" if page["dest"] == "index.html" else f"{SITE_ORIGIN}/{page['dest']}"
+
+
 def render(page: dict) -> str:
     slug = page["slug"]
     root = "" if page["at_root"] else "../"
@@ -131,8 +164,8 @@ def render(page: dict) -> str:
     footer = (PARTIALS / "footer.html").read_text(encoding="utf-8")
     body   = (PAGES_SRC / f"{slug}.html").read_text(encoding="utf-8")
 
-    extras_file = PAGES_SRC / f"{slug}.head.html"
-    head_extras = "\n" + extras_file.read_text(encoding="utf-8").rstrip("\n") if extras_file.exists() else ""
+    head_extras = read_optional(PAGES_SRC / f"{slug}.head.html")
+    jsonld_page = read_optional(JSONLD_DIR / f"{slug}.html")
 
     nav = build_nav(slug, root, pages)
 
@@ -140,9 +173,15 @@ def render(page: dict) -> str:
     replacements = {
         "{{TITLE}}":           page["title"],
         "{{DESCRIPTION}}":     page["description"],
+        "{{CANONICAL}}":       canonical_for(page),
+        "{{OG_TITLE}}":        page.get("og_title", page["title"]),
+        "{{OG_DESCRIPTION}}":  page.get("og_description", page["description"]),
+        "{{OG_IMAGE_URL}}":    page.get("og_image_url", DEFAULT_OG),
+        "{{OG_IMAGE_ALT}}":    page.get("og_image_alt", DEFAULT_ALT),
         "{{ROOT}}":            root,
         "{{PAGES}}":           pages,
         "{{HEAD_EXTRAS}}":     head_extras,
+        "{{JSONLD_PAGE}}":     jsonld_page,
         "{{NAV_LINKS}}":       nav,
         "{{FOOTER_TAGLINE}}":  page["footer_tagline"],
         "{{FOOTER_LOCATION}}": page["footer_location"],
