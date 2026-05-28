@@ -219,7 +219,7 @@ blockquote cite {
 }
 .brand:hover { color: var(--cream); border: none; }
 .brand-mark {
-  width: 32px; height: 32px;
+  width: 44px; height: 44px;
   display: inline-block;
   background-image: url('../img/gungnir-logo.png');
   background-size: contain;

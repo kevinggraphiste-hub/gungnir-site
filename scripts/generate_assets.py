@@ -22,26 +22,36 @@ FONT_REG   = "/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf"
 FONT_MONO  = "/usr/share/fonts/truetype/dejavu/DejaVuSansMono-Bold.ttf"
 
 
-def square_logo(size: int) -> Image.Image:
+def square_logo(size: int, transparent: bool = False, pad_ratio: float = 0.08) -> Image.Image:
+    """Logo recadré sur son contenu (bbox), centré, avec un léger padding.
+    transparent=True → fond transparent (favicon) ; sinon fond anthracite (iOS)."""
     logo = Image.open(LOGO).convert("RGBA")
-    logo.thumbnail((size, size), Image.LANCZOS)
-    canvas = Image.new("RGBA", (size, size), ANTHRACITE + (255,))
+    bbox = logo.getbbox()              # recadre sur les pixels non transparents
+    if bbox:
+        logo = logo.crop(bbox)
+    inner = max(1, round(size * (1 - 2 * pad_ratio)))
+    logo.thumbnail((inner, inner), Image.LANCZOS)
+    bg = (0, 0, 0, 0) if transparent else ANTHRACITE + (255,)
+    canvas = Image.new("RGBA", (size, size), bg)
     off = ((size - logo.width) // 2, (size - logo.height) // 2)
     canvas.paste(logo, off, logo)
     return canvas
 
 
 def gen_apple_touch_icon():
-    img = square_logo(180).convert("RGB")
+    img = square_logo(180).convert("RGB")   # iOS n'aime pas la transparence → fond anthracite
     img.save(ROOT / "apple-touch-icon.png", "PNG", optimize=True)
     print("  apple-touch-icon.png (180×180)")
 
 
 def gen_favicon_ico():
     sizes = [16, 32, 48]
-    icons = [square_logo(s) for s in sizes]
+    icons = [square_logo(s, transparent=True) for s in sizes]   # fond transparent (onglet clair/sombre)
     icons[0].save(ROOT / "favicon.ico", format="ICO", sizes=[(s, s) for s in sizes])
-    print(f"  favicon.ico ({'+'.join(str(s) for s in sizes)})")
+    print(f"  favicon.ico ({'+'.join(str(s) for s in sizes)}, transparent)")
+    # PNG 32 pour les navigateurs qui le préfèrent au .ico
+    square_logo(32, transparent=True).save(ROOT / "favicon-32.png", "PNG", optimize=True)
+    print("  favicon-32.png (32×32, transparent)")
 
 
 def gen_og_default():
